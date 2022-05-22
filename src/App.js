@@ -2,17 +2,21 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import SignIn from './components/SignIn';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-  
- {/* render routes below  */}
 
-    <Routes>
-      <Route path='/' element={<SignIn />}/>
-    </Routes>
+    {/* Header displays below */}
 
+    {/* render routes below  */}
+      <Routes>
+        <Route path='/' element={<SignIn />}/>
+      </Routes>
+
+{/* Footer displays below */}
+      <Footer />
     </div>
   );
 }
