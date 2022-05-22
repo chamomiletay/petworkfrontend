@@ -1,6 +1,7 @@
 //---- imports ! ----//
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
+import SignIn from './components/SignIn';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
  {/* render routes below  */}
 
     <Routes>
-      <Route/>
+      <Route path='/' element={<SignIn />}/>
     </Routes>
 
     </div>
