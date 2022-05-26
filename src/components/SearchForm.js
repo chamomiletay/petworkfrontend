@@ -10,7 +10,7 @@ function SearchForm({query, setQuery}) {
   return (
     <div>
       <div className='search'>
-        <label htmlFor='searchInput'>Search by Breed:</label>
+        <label htmlFor='searchInput'>Search by Breed: </label>
         <input type="text" id="searchInput" onChange={handleChange} />
       </div>
     </div>
