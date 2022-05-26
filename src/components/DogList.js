@@ -37,7 +37,6 @@ console.log(dogInfo)
           className="card"
         >
         <p className="name">{dogBreed.name}</p>
-        <p>{dogBreed.id}</p>
         <Link to={`/dogfacts/${dogBreed.id}`} key={dogBreed.id}>
         <img className="card-image" src={dogBreed.image.url} alt={dogBreed.name} />
         </Link>
