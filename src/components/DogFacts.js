@@ -9,12 +9,12 @@ function DogFacts() {
   useEffect(() => {
     fetch(`http://localhost:4321/dogfacts/${id}`)
     .then(res => res.json())
-    .then(res => 
-      setDog(res.results))
+    .then(res => {
+      setDog(res.result)     
+  })
     .catch(console.error)
   }, [])
 
-  console.log(dog)
 
   if (!dog){
     return(
@@ -24,20 +24,20 @@ function DogFacts() {
   return (
     <div className="details-container">
 
-      <img className="card-image" src={dog.image.url} alt={dog.name} />
+      <img className="card-image" src={dog[0].image.url} alt={dog.name} />
       
       <div className="details">
-      <h2>{dog.name}</h2>
-      <h3>{dog.origin}</h3> 
+      <h2>{dog[0].name}</h2>
+      <h3>{dog[0].origin}</h3> 
       <ul>
-        <li>Bred for: {dog.bred_for} </li> 
-        <li>Breed: {dog.breed_group}</li>
-        <li>Average Life Span: {dog.life_span}</li>
-        <li>Average Height: {dog.height.imperial}</li>
-        <li>Average Weight: {dog.weight.imperial}</li>
+        <li>Bred for: {dog[0].bred_for} </li> 
+        <li>Breed: {dog[0].breed_group}</li>
+        <li>Average Life Span: {dog[0].life_span}</li>
+        <li>Average Height: {dog[0].height.imperial}</li>
+        <li>Average Weight: {dog[0].weight.imperial}</li>
       </ul>
       <h4>Temperament:</h4>
-      <p>{dog.temperament}</p>
+      <p>{dog[0].temperament}</p>
       <br/>
       <Link to='/dogfacts'>
         <p>Back to Dog List</p>
