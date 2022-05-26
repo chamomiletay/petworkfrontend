@@ -2,6 +2,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import SignIn from './components/SignIn';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
 import DogFacts from './components/DogFacts';
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
 
     {/* Header displays below */}
-
+    <Header />
     {/* render routes below  */}
       <Routes>
         <Route path='/' element={<SignIn />}/>
