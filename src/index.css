@@ -27,14 +27,22 @@ code {
   font-weight: bold;
 }
 
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .card{
   border: 1px solid lightgray;
   border-radius: 1rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 .card-image{
-  max-height: 100px;
+  height: 100px;
+  margin: auto;
 }
 
 .details-container {
