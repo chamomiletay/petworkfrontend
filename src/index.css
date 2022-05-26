@@ -78,3 +78,8 @@ code {
 .details ul{
   list-style-type: none;
 }
+
+.header-items{
+  display: flex;
+  flex-direction: row;
+}
