@@ -12,11 +12,7 @@ code {
     monospace;
 }
 
-.header {
-  background-color: black;
-  color: white;
-  padding: 1rem;
-}
+
 
 .gallery{
   display: grid;
