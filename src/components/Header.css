@@ -1,0 +1,15 @@
+.header-items{
+    background-color: #78A7C4;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
