@@ -2,8 +2,12 @@ import React from 'react'
 import {HeaderItems} from './HeaderItems'
 import './Header.css'
 import logo from './PetworkLogo.svg'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
+  
+  console.log(HeaderItems)
+
   return (
     <div className='header'>
 
@@ -12,16 +16,17 @@ const Header = () => {
 
         <nav> 
           
-          <div class="petwork-logo">
-            <img class="logo" src={logo} alt="petwork-logo"></img>
+          <div className="petwork-logo">
+            <img className="logo" src={logo} alt="petwork-logo"></img>
           </div>
-          <ul  class="header-items">
+          <ul className="header-items">
             {HeaderItems.map((item, index)=>{
               return(
-                  <li key={index}><a className={item.cName} href={item.url}>
-                    {item.title}
-                    
-                    </a></li>
+                <div>
+                  <Link to={item.path}>
+                  <li key={index}> {item.title} <span> | </span> </li>
+                  </Link>
+                </div>
               )
               })}
 
