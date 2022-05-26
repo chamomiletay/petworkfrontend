@@ -3,11 +3,6 @@ import {HeaderItems} from './HeaderItems'
 import './Header.css'
 import logo from './PetworkLogo.svg'
 
-function Header() {
-  return (
-    <div>
-      <h1 className="header">Petwork</h1>
-
 const Header = () => {
   return (
     <div className='header'>

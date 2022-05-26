@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import Profile from './components/Profile';
 import DogFacts from './components/DogFacts';
 import DogList from './components/DogList';
-import Header from './components/Header'
 import SignUp from './components/SignUp'
 
 function App() {
@@ -17,8 +16,6 @@ function App() {
     {/* Header displays below */}
 
     <Header />
-
-    <Header/>
 
     {/* render routes below  */}
       <Routes>
