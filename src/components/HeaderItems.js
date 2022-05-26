@@ -15,12 +15,18 @@ export const HeaderItems=[
         title:"Sign In",
         url:"",
         cName: 'nav-links',
-        path: " "
+        path: "signin"
     },
     {
         title:"Favorites",
         url:"",
         cName: 'nav-links',
         path:"dogfacts"
+    },
+    {
+        title:"Profile",
+        url:"",
+        cName: 'profile',
+        path: "profile/:id"
     }
 ]
