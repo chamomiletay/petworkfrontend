@@ -26,7 +26,7 @@ console.log(dogInfo)
 
 
   if (!dogInfo) {
-    return <h2>Who let the dogs out?!?</h2>
+    return <h2>Loading...</h2>
   }
 
   return (

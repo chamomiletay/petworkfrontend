@@ -5,8 +5,6 @@ import logo from './PetworkLogo.svg'
 import { Link } from 'react-router-dom'
 
 const Header = () => {
-  
-  console.log(HeaderItems)
 
   return (
     <div className='header'>
