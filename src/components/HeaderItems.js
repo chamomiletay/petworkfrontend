@@ -22,5 +22,11 @@ export const HeaderItems=[
         url:"",
         cName: 'nav-links',
         path:"dogfacts"
+    },
+    {
+        title:"Profile",
+        url:"",
+        cName: 'profile',
+        path: "profile/:id"
     }
 ]
