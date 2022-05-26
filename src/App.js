@@ -7,13 +7,18 @@ import Footer from './components/Footer';
 import Profile from './components/Profile';
 import DogFacts from './components/DogFacts';
 import DogList from './components/DogList';
+import Header from './components/Header'
 
 function App() {
   return (
     <div className="App">
 
     {/* Header displays below */}
+
     <Header />
+
+    <Header/>
+
     {/* render routes below  */}
       <Routes>
         <Route path='/' element={<SignIn />}/>
