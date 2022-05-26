@@ -15,7 +15,7 @@ export const HeaderItems=[
         title:"Sign In",
         url:"",
         cName: 'nav-links',
-        path: " "
+        path: "signin"
     },
     {
         title:"Favorites",
