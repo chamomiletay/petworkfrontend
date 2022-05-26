@@ -1,9 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-function SearchForm() {
+function SearchForm({query, setQuery}) {
+
+
+  const handleChange = (event) => {
+    setQuery(event.target.value)
+  }
 
   return (
-    <div>SearchForm</div>
+    <div>
+      <div className='search'>
+        <label htmlFor='searchInput'>Search by Breed:</label>
+        <input type="text" id="searchInput" onChange={handleChange} />
+      </div>
+    </div>
   )
 }
 

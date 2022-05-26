@@ -5,6 +5,7 @@ function DogFacts() {
   let {id} = useParams();
 
   const [dog, setDog] = useState();
+  
 
   useEffect(() => {
     fetch(`http://localhost:4321/dogfacts/${id}`)
@@ -21,6 +22,7 @@ function DogFacts() {
     <h2>The dog you are looking for is in the dog house!</h2>
     )
   }
+  
   return (
     <div className="details-container">
 

@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import SearchForm from './SearchForm'
 
 function DogList() {
 
   const [dogInfo, setDogInfo] = useState('')
-
+  const [query, setQuery] = useState('');
 
   const getDogInfo = () => {
     const url=`http://localhost:4321/dogfacts/`
@@ -30,8 +31,18 @@ console.log(dogInfo)
   }
 
   return (
+    <div>
+      <SearchForm query={query} setQuery={setQuery} />
     <div className='gallery'>
-      {dogInfo.map(dogBreed => (
+      {dogInfo.filter((item) => {
+        if (query === ""){
+          console.log(item.name)
+          return item;
+        } else if(item.name.toLowerCase().includes(query.toLowerCase())){
+          return item;
+        }
+      })
+      .map(dogBreed => (
         <div 
           key={dogBreed.id}
           className="card"
@@ -42,6 +53,7 @@ console.log(dogInfo)
         </Link>
         </div>
       ))}
+    </div>
     </div>
   )
 }
