@@ -7,9 +7,6 @@ const Header = () => {
   return (
     <div className='header'>
 
-        <h1>Hola</h1>
-
-
         <nav> 
           
           <div class="petwork-logo">
