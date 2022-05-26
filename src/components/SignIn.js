@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const SignIn = () => {
   return (
     <div>
-      <h2>SignIn</h2>
+      <h2>Sign In</h2>
     <form class="username-input">
     <input placeholder="Username" type="text" name="username" required/>
     </form>
@@ -12,9 +14,14 @@ const SignIn = () => {
     </form><br></br>
     <button type="submit">Submit</button>
 
-    <p> Don't have an account? <a href="">Click Here</a></p>
+    <p> Don't have an account? 
+      <Link to='/SignUp'>
+      
+      Click Here</Link>
+      
+      </p>
 
-
+     
 
 
     </div>
