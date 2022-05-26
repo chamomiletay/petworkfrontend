@@ -43,13 +43,18 @@ console.log(dogInfo)
         }
       })
       .map(dogBreed => (
+        
+        <div>
+        <Link to={`/dogfacts/${dogBreed.id}`} key={dogBreed.id}>
         <div 
           key={dogBreed.id}
           className="card"
         >
+        
         <p className="name">{dogBreed.name}</p>
-        <Link to={`/dogfacts/${dogBreed.id}`} key={dogBreed.id}>
         <img className="card-image" src={dogBreed.image.url} alt={dogBreed.name} />
+
+        </div>
         </Link>
         </div>
       ))}
