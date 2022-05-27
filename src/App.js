@@ -9,8 +9,16 @@ import Profile from './components/Profile';
 import DogFacts from './components/DogFacts';
 import DogList from './components/DogList';
 import SignUp from './components/SignUp'
+import React, {useState} from 'react'
 
 function App() {
+
+  const [token, setToken] =useState();
+
+  if(!token){
+    return<SignUp setToken={setToken}/>
+  }
+
   return (
     <div className="App">
 
