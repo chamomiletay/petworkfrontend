@@ -8,7 +8,7 @@ function DogList() {
   const [query, setQuery] = useState('');
 
   const getDogInfo = () => {
-    const url=`http://localhost:4321/dogfacts/`
+    const url=`https://petwork-backend.herokuapp.com/dogfacts/`
 
     fetch(url)
     .then(res => res.json())
