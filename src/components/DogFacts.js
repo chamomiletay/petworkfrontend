@@ -8,7 +8,7 @@ function DogFacts() {
   
 
   useEffect(() => {
-    fetch(`http://localhost:4321/dogfacts/${id}`)
+    fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
     .then(res => res.json())
     .then(res => {
       setDog(res.result)     
