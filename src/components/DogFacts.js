@@ -1,11 +1,27 @@
 import React, {useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
+import EmptyHeart from './icons/EmptyHeart';
+import FullHeart from './icons/FullHeart';
 
 function DogFacts() {
   let {id} = useParams();
 
   const [dog, setDog] = useState();
-  
+  const [liked, setLiked] = useState(false);
+
+
+  const toggleLike = () =>{
+    const url = `https://petwork-backend.herokuapp.com/dogfacts/${id}`
+    fetch(url, {
+      method: 'POST',
+    })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+    })
+    .catch(error => console.log(error))
+  }
+
 
   useEffect(() => {
     fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
@@ -26,9 +42,16 @@ function DogFacts() {
   return (
     <div className="details-container">
 
+
+
       <img className="card-image" src={dog[0].image.url} alt={dog.name} />
       
       <div className="details">
+
+      <div className='breed_header' onClick={toggleLike}>
+            {liked ? <FullHeart /> : <EmptyHeart />}
+      </div>
+
       <h2>{dog[0].name}</h2>
       <h3>{dog[0].origin}</h3> 
       <ul>
