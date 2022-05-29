@@ -7,6 +7,11 @@
     list-style: none;
 }
 
+.pages{
+    margin: 5px;
+    color:#002851;
+}
+
 .logo{
     height: 100px;
     width: 100px;
