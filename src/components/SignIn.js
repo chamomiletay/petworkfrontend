@@ -2,9 +2,10 @@ import React, {useRef, useState, useEffect, useContext} from 'react'
 import { Link } from 'react-router-dom'
 import AuthCon from './SignInAuth';
 import axios from './SignUpAxios';
+import './SignInUp.css'
 
 
-const signinURL = '/profile' //endpoint for signin page
+const signinURL = 'https://petwork-backend.herokuapp.com/profile' //endpoint for signin page
 
 
 const SignIn = () => {
@@ -18,6 +19,7 @@ const SignIn = () => {
   const [user, setUser] = useState("");
   const [password, setPassword] =useState("")
   const [errorMessage, setErrorMessage] = useState("")
+  const [success, setSuccess] = useState(false);
 
   useEffect(()=>{
     userRef.current.focus();
@@ -39,6 +41,7 @@ const SignIn = () => {
       setAuth({user, password})
     setUser('');
     setPassword('');
+    setSuccess(true)
   }catch(error){
     if(!error.response){
       setErrorMessage('No Response from Server')
@@ -51,11 +54,21 @@ const SignIn = () => {
   }}
 
   return (
+    <>
+    {success ? (
+      <section>
+        <h1> You are now signed in!</h1>
+        <p>
+          <Link to="/profile/id">Go to your Profile</Link>
+        </p>
+      </section>
+    ):(
     <div>
       <p ref={errRef} className={errorMessage ? "errorMessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
       <h2>Sign In</h2>
-    <form className="username-input" onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit} >
     <input 
+      className="username input"
       placeholder="Username" 
       type="text" 
       name="username"
@@ -64,10 +77,9 @@ const SignIn = () => {
       onChange = {(e) => setUser(e.target.value)}
       value={user}
       required />
-    </form>
-
-    <form className="password-input"><br></br>
+   
     <input 
+      className ="input"
       placeholder="Password" 
       type="password" 
       name="password" 
@@ -75,20 +87,20 @@ const SignIn = () => {
       onChange = {(e) => setPassword(e.target.value)}
       value={password}
       required />
-    </form><br></br>
-    <button type="submit">Submit</button>
-
+   
+    <button className="signin" type="submit"
+      
+    >Sign In</button>
+    </form>
     <p> Don't have an account? 
       <Link to='/SignUp'>
       
-      Click Here</Link>
+      <span className="link">Click Here</span></Link>
       
       </p>
-
-     
-
-
     </div>
+    )}
+    </>
   )
 }
 

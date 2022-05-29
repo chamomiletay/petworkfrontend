@@ -17,7 +17,7 @@ const Header = () => {
           <ul className="header-items">
             {HeaderItems.map((item, index)=>{
               return(
-                <div>
+                <div className='pages'>
                   <Link to={item.path}>
                   <li key={index}> {item.title} <span> | </span> </li>
                   </Link>

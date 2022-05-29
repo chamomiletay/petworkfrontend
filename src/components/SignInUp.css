@@ -1,0 +1,26 @@
+.input{
+    margin: 5px;
+    
+}
+
+.input :hover{
+    border: 2px solid #78A7C4 ; 
+}
+
+.link {
+    color: #78A7C4;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.signin{
+    font-size: 15px;
+}
+
+button{
+    font: 20px;
+}
+
+h2{
+    color: #002851;
+}

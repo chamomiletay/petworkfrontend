@@ -4,11 +4,13 @@ import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { render } from '@testing-library/react';
 import axios from './SignUpAxios';
+import './SignInUp.css'
+
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9]{5,15}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,20}$/;
 
-const signUpURL = '/profile' //endpoint for signup?
+const signUpURL = 'https://petwork-backend.herokuapp.com/profile' //endpoint for signup?
 
 const SignUp = () => {
 
@@ -30,7 +32,7 @@ const SignUp = () => {
   // const [matchFocus, setMatchFocus] = useState(false);
 
   const[ errorMessage, setErrorMessage] = useState("");
-  const [succes, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   useEffect(()=>{
     userRef.current.focus()
@@ -84,12 +86,22 @@ const SignUp = () => {
 
 
   return (
+    <>
+    {success ? (
+      <section>
+        <h1> You are now signed up!</h1>
+        <p>
+          <Link to="/profile/id">Go to your Profile</Link>
+        </p>
+      </section>
+    ):(
     <div>
       <p ref={errRef} className={errorMessage ? "errorMessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
       <h2>Sign Up</h2>
-    <form className="username-input" onSubmit = {handleSubmit}>
-    
+    <form  onSubmit = {handleSubmit}>
+
     <input 
+      className="username input"
       placeholder="Username" 
       type="text" 
       name="username" 
@@ -116,9 +128,10 @@ const SignUp = () => {
       </p>
       
 
-    </form><br></br>
-    <form class="password-input">
+    <br></br>
+    
     <input 
+      class="password input"
       placeholder="Password" 
       type="password" 
       name="password" 
@@ -143,22 +156,17 @@ const SignUp = () => {
         Must begin with a letter <br></br>and must include <br></br>
         an uppercase letter and a number.
       </p>
-    </form><br></br>
-    <form class="dogName-input">
-    <input placeholder="Dog's Name" type="text" name="dogName" required/>
-    </form><br></br>
-    <form class="dogBreed-input">
-    <input placeholder="Dog's Breed" type="text" name="dogBreed" required/>
-    </form><br></br>
-    <form class="dogBirthday-input">
-    <input placeholder="Dog's Birthday" type="text" name="dogBirthday" required/>
-    </form><br></br>
-    <form class="dogToy-input">
-    <input placeholder="Favorite Toy" type="text" name="dogToy" required/>
-    </form><br></br>
-    <form class="dogDescription-input">
-    <input placeholder="Describe Your Dog!" type="text" name="dogDescription" required/>
-    </form><br></br>
+    
+    <input className="dogName input" placeholder="Dog's Name" type="text" name="dogName" required/>
+   
+    <input className="dogBreed input" placeholder="Dog's Breed" type="text" name="dogBreed" required/>
+  
+    <input className="dogBirthday input" placeholder="Dog's Birthday" type="text" name="dogBirthday" required/>
+   
+    <input className="dogToy input" placeholder="Favorite Toy" type="text" name="dogToy" required/>
+   
+    <input className="dogDescription input"placeholder="Describe Your Dog!" type="text" name="dogDescription" required/>
+    <br></br>
 
 
     
@@ -166,10 +174,14 @@ const SignUp = () => {
 
 
     <button disabled={!validName ||!validPassword? true : false} >Submit</button>
+
+    </form>
     
-    <p> Already registered?<Link to='/SignIn'> Sign In</Link></p>
+    <p> Already registered?<Link to='/SignIn'> <span className="link">Sign In</span></Link></p>
    
     </div>
+    )}
+    </>
   
   )
   
