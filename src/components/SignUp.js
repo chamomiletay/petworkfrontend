@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { render } from '@testing-library/react';
-import axios from './SignUpAxios'
+import axios from './SignUpAxios';
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9]{5,15}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,20}$/;
