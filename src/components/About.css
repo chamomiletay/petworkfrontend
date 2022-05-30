@@ -25,6 +25,13 @@ span {
     margin: 5px;
 }
 
+.pawprint {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 10px
+}
+
 .bentley {
     width: 250px;
     height: 250px;
@@ -45,4 +52,9 @@ span {
     color: #78A7C4;
     text-decoration: underline;
     font-weight: 600;
+}
+
+.title {
+    display: inline;
+    margin: 20px 0;
 }

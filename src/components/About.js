@@ -1,15 +1,20 @@
 import React from "react";
 import bentleyPhoto from './bentley-crop.jpeg'
 import { AboutContainer, AboutContent, AboutH2, AboutP} from './AboutElements'
+import pawprint from './blue-pawprint.png'
 
 const About = () =>{
     return(
         <div>
             <AboutContainer>
                 <AboutContent>
-                    <AboutH2>
-                        About
-                    </AboutH2>
+
+                    <img className='pawprint' src={pawprint} alt='pawprint'/>
+                        <AboutH2 className="title">
+                            About
+                        </AboutH2>
+                    <img className='pawprint'src={pawprint} alt='pawprint'/>
+
                     <AboutP>
                     <div className='main-heading'>
 

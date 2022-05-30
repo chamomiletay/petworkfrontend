@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import AuthCon from './SignInAuth';
 import axios from './SignUpAxios';
 import './SignInUp.css'
-
+import pawprint from './blue-pawprint.png'
 
 const signinURL = 'https://petwork-backend.herokuapp.com/profile' //endpoint for signin page
 
@@ -65,7 +65,9 @@ const SignIn = () => {
     ):(
     <div>
       <p ref={errRef} className={errorMessage ? "errorMessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
-      <h2>Sign In</h2>
+        <img className='pawprint' src={pawprint} alt='pawprint'/>
+          <h2 className='title'>Sign In</h2>
+        <img className='pawprint' src={pawprint} alt='pawprint'/>
     <form onSubmit={handleSubmit} >
     <input 
       className="username input"

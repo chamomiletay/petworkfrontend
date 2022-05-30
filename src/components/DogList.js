@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import SearchForm from './SearchForm'
 import ReactPaginate from 'react-paginate'
+import pawprint from './blue-pawprint.png'
 
 function DogList() {
 
@@ -42,6 +43,9 @@ console.log(dogInfo)
 
   return (
     <div>
+      <img className='pawprint' src={pawprint} alt='pawprint'/>
+        <h2 className='title'>Dog Facts</h2>
+      <img className='pawprint' src={pawprint} alt='pawprint'/>
       <SearchForm query={query} setQuery={setQuery} />
     <div className='gallery'>
       {dogInfo.slice(pagesVisited, pagesVisited + dogsPerPage).filter((item) => {

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import {HeaderItems} from './HeaderItems'
-import './Home.css'
+import './About.css'
 import Video from './videos/Video.mp4'
 import { HomeContainer, HomeBg, VideoBg, HomeContent, HomeH1} from './HomeElements'
 // import About from './About'
