@@ -59,7 +59,7 @@ const SignIn = () => {
       <section>
         <h1> You are now signed in!</h1>
         <p>
-          <Link to="/profile/id">Go to your Profile</Link>
+          <Link to="/profile/:id">Go to your Profile</Link>
         </p>
       </section>
     ):(
