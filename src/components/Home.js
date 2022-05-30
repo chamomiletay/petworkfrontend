@@ -1,22 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import {HeaderItems} from './HeaderItems'
-import bentleyPhoto from './bentley-crop.jpeg'
 import './Home.css'
+import Video from './videos/Video.mp4'
+import { HomeContainer, HomeBg, VideoBg, HomeContent, HomeH1} from './HomeElements'
+import About from './About'
 
 
 const Home = () => {
   return (
     <div>
-      <div className='main-heading'>
-        <h1>Petwork</h1>
-      </div>
-        <p>Hello, pet pawdience! We are Petwork!</p>
-        <img className='bentley' src={bentleyPhoto} alt="black and white shih-tzu"/>
-        <p>From building up your pet's care arsenal to finding the latest pawrent meetups, we've got all your needs covered!</p>
+     
+      <HomeContainer>
+        <HomeBg>
+       
+
+          <VideoBg autoPlay loop muted src={Video} type='viedo/mp4'/>
+
 
         <p>Already a user? <Link to={HeaderItems[2].path}>Sign In</Link></p>
+        </HomeBg>
+        <HomeContent>
+          <HomeH1>Petwork</HomeH1>
+        </HomeContent>
+      </HomeContainer>
+      <About></About>
     </div>
+    
   )
 }
 
