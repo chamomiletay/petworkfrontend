@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {HeaderItems} from './HeaderItems'
-import bentleyPhoto from './bentley.jpeg'
+import bentleyPhoto from './bentley-crop.jpeg'
 import './Home.css'
 
 
