@@ -32,17 +32,18 @@ span {
     margin: 0 10px
 }
 
-.bentley {
+.profile-pic {
     width: 250px;
     height: 250px;
     border: 4px dotted cornflowerblue;
     border-radius: 100%;
     opacity: 0.8;
     transition: 0.5s;
-    margin: 10px 0;
+    margin: 20px;
+    display: inline;
 }
 
-.bentley:hover {
+.profile-pic:hover {
     opacity: 1;
     transition: 0.5s;
     border: 4px dotted mediumpurple;
