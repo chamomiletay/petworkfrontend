@@ -1,8 +1,14 @@
 export const FooterItems=[
     {
             title:"About",
-            url:"",
+            url:'',
             cName: 'nav-links',
-            path: "about"
+            path: 'about'
+    },
+    {
+            title:"Planning",
+            url:'',
+            cName: 'nav-links',
+            path: 'planning'
     }
 ]

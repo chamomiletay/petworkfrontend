@@ -28,9 +28,9 @@ const Footer = () => {
 
         </nav>
     
-        <div className='footer-content'>
+        
           <p>© Petwork 2022 by Purp5. All rights reserved.</p>
-        </div>
+        
         
     </div>
   )

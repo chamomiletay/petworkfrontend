@@ -7,6 +7,10 @@
     height: 65px;
 }
 
+.footer-items {
+    display: inline-flex;
+}
+
 .nav {
     margin: 5px;
     font-size: 20px;

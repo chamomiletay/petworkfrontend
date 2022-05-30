@@ -29,6 +29,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/profile/:id' element={<Profile />} />
         <Route path='/about' element={<About/>} />
+        <Route path='/planning' element=''/>
       </Routes>
 
 {/* Footer displays below */}
