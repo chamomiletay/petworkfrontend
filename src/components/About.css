@@ -14,15 +14,19 @@ h2 {
     color: cadetblue ;
 }
 
+h3 {
+    color: cadetblue;
+}
 p {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     font-size: 20px;
 }
 
-span {
-    margin: 5px;
+.bold {
+    font-weight: 600;
+    color: cadetblue;
 }
 
 .pawprint {
@@ -32,6 +36,23 @@ span {
     margin: 0 10px
 }
 
+.pet-container {
+    display: flex;
+}
+
+.pet {
+    flex: 1;
+    /* border: 2px solid yellow; */
+}
+
+.pet:first-child {
+    margin-right: 10px;
+}
+
+.pet:last-child {
+    margin-left: 10px;
+}
+
 .profile-pic {
     width: 250px;
     height: 250px;
@@ -39,7 +60,6 @@ span {
     border-radius: 100%;
     opacity: 0.8;
     transition: 0.5s;
-    margin: 20px;
     display: inline;
 }
 
