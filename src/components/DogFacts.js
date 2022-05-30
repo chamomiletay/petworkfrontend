@@ -4,6 +4,7 @@ import EmptyHeart from './icons/EmptyHeart';
 import FullHeart from './icons/FullHeart';
 import './DogFacts.css'
 
+
 function DogFacts() {
   let {id} = useParams();
 
