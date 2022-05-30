@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <div className='profile'>
       <img className='pawprint' src={pawprint} alt='pawprint'/>
-        <h2 className='title'>Profile Page</h2>
+        <h2 className='title'>My Profile</h2>
       <img className='pawprint' src={pawprint} alt='pawprint'/>
     </div>
   )
