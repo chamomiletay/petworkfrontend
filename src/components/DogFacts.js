@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
 import EmptyHeart from './icons/EmptyHeart';
 import FullHeart from './icons/FullHeart';
+import './DogFacts.css'
+
 
 function DogFacts() {
   let {id} = useParams();
