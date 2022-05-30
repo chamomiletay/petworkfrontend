@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { render } from '@testing-library/react';
 import axios from './SignUpAxios';
 import './SignInUp.css'
-
+import pawprint from './blue-pawprint.png'
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9]{5,15}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,20}$/;
@@ -97,7 +97,11 @@ const SignUp = () => {
     ):(
     <div>
       <p ref={errRef} className={errorMessage ? "errorMessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
-      <h2>Sign Up</h2>
+      
+      <img className='pawprint' src={pawprint} alt='pawprint'/>
+        <h1 className='title'>Sign Up</h1>
+      <img className='pawprint' src={pawprint} alt='pawprint'/>
+
     <form  onSubmit = {handleSubmit}>
 
     <input 

@@ -25,16 +25,25 @@ span {
     margin: 5px;
 }
 
-.bentley {
-    width: 350px;
-    height: 350px;
+.pawprint {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 10px
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
     border: 4px dotted cornflowerblue;
     border-radius: 100%;
     opacity: 0.8;
     transition: 0.5s;
+    margin: 20px;
+    display: inline;
 }
 
-.bentley:hover {
+.profile-pic:hover {
     opacity: 1;
     transition: 0.5s;
     border: 4px dotted mediumpurple;
@@ -44,4 +53,9 @@ span {
     color: #78A7C4;
     text-decoration: underline;
     font-weight: 600;
+}
+
+.title {
+    display: inline;
+    margin: 20px 0;
 }

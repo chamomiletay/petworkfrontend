@@ -4,7 +4,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45px;
+    height: 65px;
+}
+
+.nav {
+    margin: 5px;
+    font-size: 20px;
+}
+
+/* .footer-content {
+    position: absolute;
+} */
+
+li {
+    color: white;
+    list-style: none;
+}
+
+li:hover {
+    text-decoration: underline solid white;
 }
 
 .logo{
