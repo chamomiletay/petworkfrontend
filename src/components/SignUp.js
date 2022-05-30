@@ -91,7 +91,7 @@ const SignUp = () => {
       <section>
         <h1> You are now signed up!</h1>
         <p>
-          <Link to="/profile/id">Go to your Profile</Link>
+          <Link to="/profile/:id">Go to your Profile</Link>
         </p>
       </section>
     ):(
