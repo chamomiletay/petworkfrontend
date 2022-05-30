@@ -6,12 +6,6 @@ export const HeaderItems=[
         path:' '
     },
     {
-        title:"About",
-        url:"",
-        cName: 'nav-links',
-        path: ""
-    },
-    {
         title:"Dog Facts",
         url:"",
         cName: 'nav-links',

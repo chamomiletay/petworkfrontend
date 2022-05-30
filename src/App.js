@@ -9,6 +9,7 @@ import Profile from './components/Profile';
 import DogFacts from './components/DogFacts';
 import DogList from './components/DogList';
 import SignUp from './components/SignUp'
+import About from './components/About';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/dogfacts/:id' element={<DogFacts />} />
         <Route path='/' element={<Home />}/>
         <Route path='/profile/:id' element={<Profile />} />
+        <Route path='/about' element={<About/>} />
       </Routes>
 
 {/* Footer displays below */}

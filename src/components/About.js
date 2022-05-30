@@ -16,7 +16,6 @@ const About = () =>{
                     </div>
                      <p>Hello, pet pawdience! We are Petwork!</p>
                         <img className='bentley' src={bentleyPhoto} alt="black and white shih-tzu"/>
-                    <p>From building up your pet's care arsenal to finding the latest pawrent meetups, we've got all your needs covered!</p>
                         
                     </AboutP>
                 </AboutContent>

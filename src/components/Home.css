@@ -26,12 +26,13 @@ span {
 }
 
 .bentley {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border: 4px dotted cornflowerblue;
     border-radius: 100%;
     opacity: 0.8;
     transition: 0.5s;
+    margin: 10px 0;
 }
 
 .bentley:hover {

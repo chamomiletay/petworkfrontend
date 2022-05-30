@@ -1,16 +1,37 @@
 import React from 'react'
 import './Footer.css'
+import { Link as LinkRouter } from 'react-router-dom'
+import { FooterItems } from './FooterItems'
 import logo from './PetworkLogo.svg'
 
 const Footer = () => {
   return (
     <div className='footer'>
 
-      <div className='petwork-logo'>
-        {/* <img className="logo" src={logo} alt="petwork-logo"></img> */}
-      </div>
-      
-        <p>© Petwork 2022 by Purp5. All rights reserved.</p>
+      <nav>
+        <div className='petwork-logo'>
+          {/* <img className="logo" src={logo} alt="petwork-logo"></img> */}
+        </div>
+
+          <ul className='footer-items'>{FooterItems.map((item, index)=> {
+            return(
+              <div className='nav'>
+                <LinkRouter to={item.path}>
+                  <li key={index}>{item.title} 
+                    <span> | </span>
+                  </li>
+                </LinkRouter>
+              </div>
+            )
+          })}
+          </ul>
+
+        </nav>
+    
+        <div className='footer-content'>
+          <p>© Petwork 2022 by Purp5. All rights reserved.</p>
+        </div>
+        
     </div>
   )
 }
