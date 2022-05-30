@@ -21,6 +21,10 @@ p {
     font-size: 20px;
 }
 
+span {
+    margin: 5px;
+}
+
 .bentley {
     width: 350px;
     height: 350px;
@@ -34,4 +38,10 @@ p {
     opacity: 1;
     transition: 0.5s;
     border: 4px dotted mediumpurple;
+}
+
+.link {
+    color: #78A7C4;
+    text-decoration: underline;
+    font-weight: 600;
 }
