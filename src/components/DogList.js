@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import SearchForm from './SearchForm'
 import ReactPaginate from 'react-paginate'
 import pawprint from './blue-pawprint.png'
+//Used this link / video to help with understanding the pagination hook: https://www.youtube.com/watch?v=HANSMtDy508
 
 function DogList() {
 

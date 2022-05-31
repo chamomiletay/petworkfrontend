@@ -57,11 +57,11 @@ function DogFacts() {
       <h2>{dog[0].name}</h2>
       <h3>{dog[0].origin}</h3> 
       <ul>
-        <li>Bred for: {dog[0].bred_for} </li> 
-        <li>Breed: {dog[0].breed_group}</li>
-        <li>Average Life Span: {dog[0].life_span}</li>
-        <li>Average Height: {dog[0].height.imperial}</li>
-        <li>Average Weight: {dog[0].weight.imperial}</li>
+        <li className='aboutDog'>Bred for: {dog[0].bred_for} </li> 
+        <li className='aboutDog'>Breed: {dog[0].breed_group}</li>
+        <li className='aboutDog'>Average Life Span: {dog[0].life_span}</li>
+        <li className='aboutDog'>Average Height: {dog[0].height.imperial}</li>
+        <li className='aboutDog'>Average Weight: {dog[0].weight.imperial}</li>
       </ul>
       <h4>Temperament:</h4>
       <p>{dog[0].temperament}</p>
