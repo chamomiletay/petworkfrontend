@@ -1,0 +1,36 @@
+.footer {
+    background-color: #002851;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+}
+
+.footer-items {
+    display: inline-flex;
+}
+
+.nav {
+    margin: 5px;
+    font-size: 20px;
+}
+
+/* .footer-content {
+    position: absolute;
+} */
+
+li {
+    color: white;
+    list-style: none;
+}
+
+li:hover {
+    text-decoration: underline solid white;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    float: left;
+}

@@ -1,36 +1,75 @@
 import React, {useState, useEffect} from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
+import EmptyHeart from './icons/EmptyHeart';
+import FullHeart from './icons/FullHeart';
+
+
 
 function DogFacts() {
   let {id} = useParams();
 
   const [dog, setDog] = useState();
+  const [liked, setLiked] = useState(false);
+
+
+  const toggleLike = () =>{
+    const url = `https://petwork-backend.herokuapp.com/dogfacts/${id}`
+    fetch(url, {
+      method: 'POST',
+    })
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+    })
+    .catch(error => console.log(error))
+  }
+
 
   useEffect(() => {
-    fetch(`http://localhost:4321/dogfacts/${id}`)
+    fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
     .then(res => res.json())
-    .then(res => 
-      setDog(res.results))
+    .then(res => {
+      setDog(res.result)     
+  })
     .catch(console.error)
   }, [])
 
-  console.log(dog.height.metric)
 
   if (!dog){
+    return(
     <h2>The dog you are looking for is in the dog house!</h2>
+    )
   }
+  
   return (
     <div className="details-container">
-      <h2>{dog.name}</h2>
-      <img className="card-image" src={dog.image.url} alt={dog.name} />
-      <h3>{dog.origin}</h3> 
+
+
+
+      <img className="card-image" src={dog[0].image.url} alt={dog.name} />
+      
+      <div className="details">
+
+      <div className='breed_header' onClick={toggleLike}>
+            {liked ? <FullHeart /> : <EmptyHeart />}
+      </div>
+
+      <h2>{dog[0].name}</h2>
+      <h3>{dog[0].origin}</h3> 
       <ul>
-        <li>Bred for: {dog.bred_for} </li> 
-        <li>Breed: {dog.breed_group}</li>
-        <li>Average Life Span: {dog.life_span}</li>
-        <li>Average Height: {dog.height.imperial}</li>
-        <li>Average Weight: {dog.weight.imperial}</li>
+        <li className='aboutDog'>Bred for: {dog[0].bred_for} </li> 
+        <li className='aboutDog'>Breed: {dog[0].breed_group}</li>
+        <li className='aboutDog'>Average Life Span: {dog[0].life_span}</li>
+        <li className='aboutDog'>Average Height: {dog[0].height.imperial}</li>
+        <li className='aboutDog'>Average Weight: {dog[0].weight.imperial}</li>
       </ul>
+      <h4>Temperament:</h4>
+      <p>{dog[0].temperament}</p>
+      <br/>
+      <Link to='/dogfacts'>
+        <p>Back to Dog List</p>
+      </Link>
+      </div>
     </div>
   )
 }

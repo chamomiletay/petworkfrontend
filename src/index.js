@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //--- import Router component ---//
 import { BrowserRouter as Router } from 'react-router-dom';
+import { AuthPro } from './components/SignInAuth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +13,9 @@ root.render(
 
 //--- Router wrap ---//
 <Router>
+  <AuthPro>
     <App />
+  </AuthPro> 
 </Router>
 
   // </React.StrictMode>

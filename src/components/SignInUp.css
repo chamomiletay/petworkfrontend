@@ -1,0 +1,30 @@
+.input{
+    margin: 5px;
+
+}
+
+
+.link {
+    color: #78A7C4;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.signin{
+    font-size: 15px;
+}
+
+button{
+    font: 20px;
+}
+
+h2{
+    color: #002851;
+}
+
+.pawprint {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 10px
+}
