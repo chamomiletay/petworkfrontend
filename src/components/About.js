@@ -1,6 +1,7 @@
 import React from "react";
 import bentleyPhoto from './bentley-crop.jpeg'
-import creamcheesePhoto from './cream-cheese2.jpg'
+import creamcheesePhoto from './mochi-creamcheese.jpg'
+import haroldPhoto from './harold.jpeg'
 import { AboutContainer, AboutContent, AboutH2, AboutP} from './AboutElements'
 import pawprint from './blue-pawprint.png'
 import './About.css'
@@ -43,10 +44,10 @@ const About = () =>{
                         </div>
 
                         <div className="pet">
-                            {/* [insert name]! (Briana) */}
-                            <img className='profile-pic' src='' alt="briana's fur baby"/>
+                            {/* Harold! (Briana) */}
+                            <img className='profile-pic' src={haroldPhoto} alt="briana's fur baby"/>
 
-                            <h3>Briana's fur baby [sry i forgot his name!]</h3>
+                            <h3>Harold</h3>
 
                         </div>
 
