@@ -1,0 +1,44 @@
+.profile-container {
+    /* border: 2px solid red; */
+    display: flex;
+}
+
+.profile-info {
+    flex: 1;
+    border: 2px solid burlywood;
+    background-color: bisque;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px 0;
+}
+
+.profile-info:first-child {
+    margin: 30px 50px;
+}
+
+.profile-info:last-child {
+    margin-top: 10px;
+}
+
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.pawprint {
+    width: 15px;
+    height: 15px;
+    display: inline;
+    margin: 0 5px
+}
+
+.descript-container {
+    margin: 10px 0;
+}
+
+.descriptor {
+    display: inline;
+}
