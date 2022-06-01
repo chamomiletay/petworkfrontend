@@ -49,13 +49,14 @@ console.log(dogInfo)
       <img className='pawprint' src={pawprint} alt='pawprint'/>
       <SearchForm query={query} setQuery={setQuery} />
     <div className='gallery'>
-      {dogInfo.slice(pagesVisited, pagesVisited + dogsPerPage).filter((item) => {
+      {dogInfo.filter((item) => {
         if (query === ""){
           return item;
         } else if(item.name.toLowerCase().includes(query.toLowerCase())){
           return item;
         }
       })
+      .slice(pagesVisited, pagesVisited + dogsPerPage)
       .map(dogBreed => (
         
         <div>

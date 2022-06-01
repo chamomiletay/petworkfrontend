@@ -21,7 +21,7 @@ const Home = () => {
 
         <p>Already a user? 
           <Link to={HeaderItems[2].path}>
-            <span className='link'>Sign In</span>
+            <span className='link'> Sign In</span>
           </Link>
         </p>
         </HomeBg>
