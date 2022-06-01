@@ -10,7 +10,9 @@ import pawprint from './blue-pawprint.png'
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9]{5,15}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,20}$/;
 
+
 const signUpURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signup?
+
 
 const SignUp = () => {
 
