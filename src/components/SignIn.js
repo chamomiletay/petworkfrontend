@@ -5,7 +5,7 @@ import axios from './SignUpAxios';
 import './SignInUp.css'
 import pawprint from './blue-pawprint.png'
 
-const signinURL = 'https://petwork-backend.herokuapp.com/profile' //endpoint for signin page
+const signinURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signin page
 
 
 const SignIn = () => {
