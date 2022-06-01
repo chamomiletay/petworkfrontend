@@ -28,10 +28,10 @@ const About = () =>{
                     <div className="pet-container">
                         <div className="pet">
 
-                            {/* Cream Cheese! (Sena) */}
+                            {/* Cream Cheese and Mochi! (Sena) */}
                             <img className='profile-pic' src={creamcheesePhoto} alt="cream cheese's breed info here"/>
 
-                            <h3>Cream Cheese</h3>
+                            <h3>Cream Cheese and Mochi</h3>
 
                         </div>
 
