@@ -22,6 +22,7 @@ function App() {
     <Header />
 
     {/* render routes below  */}
+      <div className='body'>
       <Routes>
         <Route path='/signin' element={<SignIn />}/>
         <Route path='/signup' element={<SignUp/>}/>
@@ -32,6 +33,7 @@ function App() {
         <Route path='/about' element={<About/>} />
         <Route path='/planning' element={<Planning />}/>
       </Routes>
+      </div>
 
 {/* Footer displays below */}
       <Footer />

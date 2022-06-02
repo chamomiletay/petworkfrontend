@@ -30,23 +30,24 @@ export const VideoBg = styled.video`
     height: 80%%;
     -o-object-fit:cover;
     object-fit:cover;
-    background: white;
+    background-color: white;
 `
 
 export const HomeContent = styled.div`
     z-index: 2;
-    max-width: 1200px;
     color: white;
     position: absolute;
     padding: 8px 24px;
     display: flex;
     flex-direction: column;
     align-items:center;
+    max-width: 1200px;
 `
 
 
 export const HomeH1 =styled.h1`
     justify-content: center;
+    font-size: 300%;
 
 `
 
