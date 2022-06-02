@@ -20,6 +20,7 @@ function DogFacts() {
     .then(res => res.json())
     .then(res => {
       console.log(res)
+      setLiked(res.likeStatus)
     })
     .catch(error => console.log(error))
   }
@@ -29,11 +30,11 @@ function DogFacts() {
     fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
     .then(res => res.json())
     .then(res => {
-      setDog(res.result)     
+      setDog(res.result)
+      setLiked(res.likeStatus)     
   })
     .catch(console.error)
   }, [])
-
 
   if (!dog){
     return(
@@ -46,7 +47,7 @@ function DogFacts() {
 
 
 
-      <img className="card-image" src={dog[0].image.url} alt={dog.name} />
+      <img className="dog-image" src={dog[0].image.url} alt={dog.name} />
       
       <div className="details">
 
@@ -67,9 +68,10 @@ function DogFacts() {
       <p>{dog[0].temperament}</p>
       <br/>
       <Link to='/dogfacts'>
-        <p>Back to Dog List</p>
+        <h3>Back to Dog List</h3>
       </Link>
       </div>
+      
     </div>
   )
 }
