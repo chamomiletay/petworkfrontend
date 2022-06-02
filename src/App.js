@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import SignIn from './components/SignIn';
 import Header from './components/Header';
 import Home from './components/Home';
+import Favorites from './components/Favorites';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
 import DogFacts from './components/DogFacts';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/dogfacts' element={<DogList />} />
         <Route path='/dogfacts/:id' element={<DogFacts />} />
+        <Route path='/favorites' element={<Favorites />} />
         <Route path='/' element={<Home />}/>
         <Route path='/profile/:id' element={<Profile />} />
         <Route path='/about' element={<About/>} />

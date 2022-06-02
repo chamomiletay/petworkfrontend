@@ -20,6 +20,7 @@ function DogFacts() {
     .then(res => res.json())
     .then(res => {
       console.log(res)
+      setLiked(res.likeStatus)
     })
     .catch(error => console.log(error))
   }
@@ -29,11 +30,11 @@ function DogFacts() {
     fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
     .then(res => res.json())
     .then(res => {
-      setDog(res.result)     
+      setDog(res.result)
+      setLiked(res.likeStatus)     
   })
     .catch(console.error)
   }, [])
-
 
   if (!dog){
     return(
@@ -70,6 +71,7 @@ function DogFacts() {
         <p>Back to Dog List</p>
       </Link>
       </div>
+      
     </div>
   )
 }

@@ -21,7 +21,7 @@ export const HeaderItems=[
         title:"Favorites",
         url:"",
         cName: 'nav-links',
-        path:"dogfacts"
+        path:"favorites"
     },
     {
         title:"Profile",
