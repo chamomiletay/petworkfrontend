@@ -74,6 +74,7 @@ const getFavorites = () => {
       <div className='gallery'>
 
         {dogs
+        // eslint-disable-next-line
         .filter((dogs) => {
           for(let i=0; i<favorites.favorites.length; i++){
             if(dogs.id.toString() === favorites.favorites[i]){

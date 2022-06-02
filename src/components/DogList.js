@@ -56,6 +56,7 @@ console.log(dogInfo)
 
 
     <div className='gallery'>
+    {/* eslint-disable-next-line */}
       {dogInfo.filter((item) => {
         if (query === ""){
           return item;
