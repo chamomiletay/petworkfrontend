@@ -47,7 +47,7 @@ function DogFacts() {
 
 
 
-      <img className="card-image" src={dog[0].image.url} alt={dog.name} />
+      <img className="dog-image" src={dog[0].image.url} alt={dog.name} />
       
       <div className="details">
 
@@ -68,7 +68,7 @@ function DogFacts() {
       <p>{dog[0].temperament}</p>
       <br/>
       <Link to='/dogfacts'>
-        <p>Back to Dog List</p>
+        <h3>Back to Dog List</h3>
       </Link>
       </div>
       

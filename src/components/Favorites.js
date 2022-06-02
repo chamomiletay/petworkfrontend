@@ -34,7 +34,9 @@ const getFavorites = () => {
     getFavorites();
   }, [])
 
-  console.log(dogs, favorites)
+
+
+  console.log(dogs, favorites.favorites)
 
   if(!dogs){
     return (
@@ -43,7 +45,7 @@ const getFavorites = () => {
         <h2 className='title'>Favorites</h2>
       <img className='pawprint' src={pawprint} alt='pawprint'/>
 
-      <h2>Check out the dog facts page and heart your favorite breeds!</h2>
+      <h2>Click on a dog breed from the Dog Facts page and heart your favorite breeds!</h2>
 
     </div>
     )
@@ -70,12 +72,15 @@ const getFavorites = () => {
       <img className='pawprint' src={pawprint} alt='pawprint'/>
 
       <div className='gallery'>
+
         {dogs
         .filter((dogs) => {
-          
-          if(dogs.id.toString() == favorites.favorites[0]){
-            return dogs
+          for(let i=0; i<favorites.favorites.length; i++){
+            if(dogs.id.toString() === favorites.favorites[i]){
+              return dogs
+            }
           }
+
         })
         .map(dogBreed => (
           <div>
