@@ -9,6 +9,7 @@ import pawprint from './blue-pawprint.png'
 function DogList() {
  
   const [dogInfo, setDogInfo] = useState('')
+ 
   const [query, setQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(0)
 
@@ -19,6 +20,7 @@ function DogList() {
   const changePage = ({selected}) => {
     setPageNumber(selected)
   }
+
 
 
   const getDogInfo = () => {
@@ -52,6 +54,7 @@ console.log(dogInfo)
       <SearchForm query={query} setQuery={setQuery} />
 
 
+
     <div className='gallery'>
       {dogInfo.filter((item) => {
         if (query === ""){
@@ -67,16 +70,22 @@ console.log(dogInfo)
         <div 
           key={dogBreed.id}
           className="card"
-        >
+        > 
+ 
         <Link to={`/dogfacts/${dogBreed.id}`} key={dogBreed.id}>
         <p className="name">{dogBreed.name}</p>
-        <img className="card-image" src={dogBreed.image.url} alt={dogBreed.name} />
+        <img className="card-image" src={dogBreed.image.url} alt={dogBreed.name}  />
         </Link>
+
         </div>
         </div>
-      ))}
+      ))
+
+      }
      
     </div>
+
+
     <ReactPaginate 
         previousLabel={"Previous"}
         nextLabel={"Next"}

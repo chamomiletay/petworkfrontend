@@ -45,11 +45,16 @@ a:link, a:visited {
   margin: auto;
 }
 
+.dog-image{
+  max-width: 500px;
+  padding-left: 2rem;
+}
+
 .details-container {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  justify-items: center;
 }
 
 .details-image {
@@ -58,8 +63,8 @@ a:link, a:visited {
 }
 
 .details {
-  padding: 1rem;
-  width: 350px;
+  padding: 5rem;
+
 }
 
 .details h2 {
@@ -76,10 +81,13 @@ a:link, a:visited {
 
 .details h4 {
   margin-bottom: 0;
+  font-family: 'Noto Serif', Georgia, serif;
 }
 
 .details p {
   margin: 0;
+  font-family: 'Noto Serif', Georgia, serif;
+  font-size: 1rem;
 }
 
 .details ul{
@@ -133,6 +141,20 @@ a:link, a:visited {
 
 .aboutDog{
   color: black;
+  font-family: 'Noto Serif', Georgia, serif;
+}
+
+@media (max-width: 800px){
+  .details-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px){
+  .dog-image{
+    max-width: 400px;
+  }
 }
 
 @media (min-width: 600px) {
