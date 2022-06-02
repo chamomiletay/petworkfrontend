@@ -34,6 +34,7 @@ function DogFacts() {
       setLiked(res.likeStatus)     
   })
     .catch(console.error)
+    // eslint-disable-next-line
   }, [])
 
   if (!dog){
