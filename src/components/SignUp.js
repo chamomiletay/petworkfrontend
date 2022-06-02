@@ -14,6 +14,7 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,20}$/;
 const signUpURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signup?
 
 
+
 const SignUp = () => {
 
   const userRef = useRef();
@@ -149,7 +150,7 @@ const SignUp = () => {
       aria-describedby="passwordnote"
       />
 
-     <span className={validPassword ? 'valid': 'hide'}>
+     <span className={validPassword ? 'valid' : 'hide'}>
       <FontAwesomeIcon icon={faCheck}/>
       </span>
       <span className={validPassword || !user ? "hide" : "invalid"}>
@@ -162,18 +163,19 @@ const SignUp = () => {
         Must begin with a letter <br></br>and must include <br></br>
         an uppercase letter and a number.
       </p>
-    
-    <input className="dogName input" placeholder="Dog's Name" type="text" name="dogName" required/>
+    <div class="doginfo">
+    <input className="dogName input" placeholder="Dog's Name" type="text" name="dogName"/>
    
-    <input className="dogBreed input" placeholder="Dog's Breed" type="text" name="dogBreed" required/>
+    <input className="dogBreed input" placeholder="Dog's Breed" type="text" name="dogBreed" />
   
-    <input className="dogBirthday input" placeholder="Dog's Birthday" type="text" name="dogBirthday" required/>
+    <input className="dogBirthday input" placeholder="Dog's Birthday" type="text" name="dogBirthday"/>
    
-    <input className="dogToy input" placeholder="Favorite Toy" type="text" name="dogToy" required/>
+    <input className="dogToy input" placeholder="Favorite Toy" type="text" name="dogToy"/>
    
-    <input className="dogDescription input"placeholder="Describe Your Dog!" type="text" name="dogDescription" required/>
+    <textarea className="dogDescription input"placeholder="Describe Your Dog!" type="text" name="dogDescription" rows="10" cols="30"/>
     <br></br>
-
+    </div> 
+    <p>*Psssst! Only a Password and Username are required at signup*</p>
 
     
 
