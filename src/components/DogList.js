@@ -3,10 +3,11 @@ import {Link} from 'react-router-dom'
 import SearchForm from './SearchForm'
 import ReactPaginate from 'react-paginate'
 import pawprint from './blue-pawprint.png'
+
 //Used this link / video to help with understanding the pagination hook: https://www.youtube.com/watch?v=HANSMtDy508
 
 function DogList() {
-
+ 
   const [dogInfo, setDogInfo] = useState('')
   const [query, setQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(0)
@@ -19,14 +20,14 @@ function DogList() {
     setPageNumber(selected)
   }
 
+
   const getDogInfo = () => {
-    const url=`https://petwork-backend.herokuapp.com/dogfacts/`
+    const url= `https://petwork-backend.herokuapp.com/dogfacts/`
 
     fetch(url)
     .then(res => res.json())
     .then(res => {
       setDogInfo(res.results)
-      console.log(res.results)
     })
     .catch(console.error)
   }
@@ -44,10 +45,13 @@ console.log(dogInfo)
 
   return (
     <div>
+
       <img className='pawprint' src={pawprint} alt='pawprint'/>
         <h2 className='title'>Dog Facts</h2>
       <img className='pawprint' src={pawprint} alt='pawprint'/>
       <SearchForm query={query} setQuery={setQuery} />
+
+
     <div className='gallery'>
       {dogInfo.filter((item) => {
         if (query === ""){

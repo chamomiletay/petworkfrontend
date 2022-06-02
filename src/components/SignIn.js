@@ -35,7 +35,7 @@ const SignIn = () => {
     try{ const response = await axios.post(signinURL, JSON.stringify({username:user, password}),
       {
         headers: {'Content-Type': 'application/json' },
-        withCredentials: true 
+        withCredentials: false 
       }
     );
       console.log(JSON.stringify(response?.data))
@@ -60,7 +60,7 @@ const SignIn = () => {
       <section>
         <h1> You are now signed in!</h1>
         <p>
-          <Link to="/profile/:id">Go to your Profile</Link>
+          <Link to={`/profile/${user}`}>Go to your Profile</Link>
         </p>
       </section>
     ):(
