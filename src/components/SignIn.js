@@ -22,7 +22,7 @@ const SignIn = ({history}) => {
  
     if (userInfo){
       navigate(`/profile/${username}`)
-    }
+    } 
   }, [history])
 
   async function handleSubmit(e){
