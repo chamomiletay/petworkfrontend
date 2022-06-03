@@ -1,58 +1,55 @@
-import React, {useRef, useState, useEffect, useContext} from 'react'
-import { Link } from 'react-router-dom'
-import AuthCon from './SignInAuth';
+import React, {useRef, useState, useEffect} from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from './SignUpAxios';
 import './SignInUp.css'
 import pawprint from './blue-pawprint.png'
 
-//const signinURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signin page
-const signinURL = 'http://localhost:4321/profile/:id'
+const SignIn = ({history}) => {
 
-
-const SignIn = () => {
-
-
-  const {setAuth} =useContext(AuthCon)
+  const navigate = useNavigate();
+  let {id} = useParams();
 
   const userRef = useRef();
   const errRef = useRef();
 
-  const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] =useState("")
   const [errorMessage, setErrorMessage] = useState("")
   const [success, setSuccess] = useState(false);
 
   useEffect(()=>{
-    userRef.current.focus();
-  }, [])
-
-  useEffect(()=>{
-    setErrorMessage("");
-  }, [user, password])
+    const userInfo = localStorage.getItem("userInfo")
+ 
+    if (userInfo){
+      navigate(`/profile/${username}`)
+    } 
+  }, [history])
 
   async function handleSubmit(e){
     e.preventDefault();
-    try{ const response = await axios.post(signinURL, JSON.stringify({username:user, password}),
-      {
-        headers: {'Content-Type': 'application/json' },
-        withCredentials: true
+
+    try{
+      const config = {
+        headers: {
+          "Content-type": "application/json"
+        }
       }
-    );
-      console.log(JSON.stringify(response?.data))
-      setAuth({user, password})
-    setUser('');
-    setPassword('');
-    setSuccess(true)
-  }catch(error){
-    if(!error.response){
-      setErrorMessage('No Response from Server')
-    }else if (error.response?.status ===400){
-      setErrorMessage('Either the username or password is missing')
-    }else{
-      setErrorMessage('Login Failed')
+      setSuccess(true)
+
+      const {data} = await axios.post('http://localhost:4321/profile/:id', {
+        username,
+        password,
+      },
+      config
+      );
+      setUsername(data.username)
+      console.log(username)
+      localStorage.setItem('userInfo', JSON.stringify(data))
+    } catch(error) {
+      setErrorMessage(error.response.data)
     }
-    errRef.current.focus();
-  }}
+}
+
 
   return (
     <>
@@ -60,16 +57,19 @@ const SignIn = () => {
       <section>
         <h1> You are now signed in!</h1>
         <p>
-          <Link to={`/profile/${user}`}>Go to your Profile</Link>
+          <Link to={`/profile/${username}`}>Go to your Profile</Link>
         </p>
       </section>
     ):(
     <div>
+
       <p ref={errRef} className={errorMessage ? "errorMessage" : "offscreen"} aria-live="assertive">{errorMessage}</p>
         <img className='pawprint' src={pawprint} alt='pawprint'/>
           <h2 className='title'>Sign In</h2>
         <img className='pawprint' src={pawprint} alt='pawprint'/>
+
     <form onSubmit={handleSubmit} >
+      <div className="form">
     <input 
       className="username input"
       placeholder="Username" 
@@ -77,8 +77,8 @@ const SignIn = () => {
       name="username"
       ref={userRef}
       autoComplete="off" 
-      onChange = {(e) => setUser(e.target.value)}
-      value={user}
+      onChange = {(e) => setUsername(e.target.value)}
+      value={username}
       required />
    
     <input 
@@ -91,9 +91,10 @@ const SignIn = () => {
       value={password}
       required />
    
-    <button className="signin" type="submit"
+    <button className="signinButton" type="submit"
       
     >Sign In</button>
+    </div>
     </form>
     <p> Don't have an account? 
       <Link to='/SignUp'>
