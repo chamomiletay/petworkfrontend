@@ -1,13 +1,12 @@
 import React, {useRef, useState, useEffect} from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from './SignUpAxios';
 import './SignInUp.css'
 import pawprint from './blue-pawprint.png'
 
-const SignIn = ({history}) => {
+const SignIn = ({}) => {
 
   const navigate = useNavigate();
-  let {id} = useParams();
 
   const userRef = useRef();
   const errRef = useRef();
@@ -24,7 +23,7 @@ const SignIn = ({history}) => {
       console.log(userInfo)
       navigate(`/profile/${userInfo.username}`)
     } 
-  }, [history])
+  }, [navigate])
 
 
   async function handleSubmit(e){
@@ -47,6 +46,7 @@ const SignIn = ({history}) => {
       setUsername(data.username)
       console.log(username)
       localStorage.setItem('userInfo', JSON.stringify(data))
+      window.location.reload(false)
     } catch(error) {
       setErrorMessage(error.response.data)
     }

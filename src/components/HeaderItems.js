@@ -1,4 +1,3 @@
-import Profile from "./Profile"
 
 export const HeaderItems=[
     {
@@ -19,10 +18,10 @@ export const HeaderItems=[
     //     cName: 'nav-links',
     //     path: "signin"
     // },
-    {
-        title:"Favorites",
-        url:"",
-        cName: 'nav-links',
-        path:"favorites"
-    }
+    // {
+    //     title:"Favorites",
+    //     url:"",
+    //     cName: 'nav-links',
+    //     path:"favorites"
+    // }
 ]

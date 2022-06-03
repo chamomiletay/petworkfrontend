@@ -25,6 +25,9 @@
 .profile a {
     color: white;
 }
+.bar{
+    color: white;
+}
 
 @media (max-width: 420px){
     .bar{

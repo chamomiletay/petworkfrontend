@@ -140,6 +140,9 @@ a:link, a:visited {
   font-family: 'Noto Serif', Georgia, serif;
 }
 
+.welcome{
+  font-weight: bold;
+}
 
 @media (max-width: 800px){
   .details-container{
