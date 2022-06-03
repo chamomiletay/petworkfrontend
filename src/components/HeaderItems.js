@@ -24,11 +24,5 @@ export const HeaderItems=[
         url:"",
         cName: 'nav-links',
         path:"favorites"
-    },
-    {
-        title:"Profile",
-        url:"",
-        cName: 'profile',
-        path: <Profile />
     }
 ]
