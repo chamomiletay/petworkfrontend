@@ -5,8 +5,8 @@ import axios from './SignUpAxios';
 import './SignInUp.css'
 import pawprint from './blue-pawprint.png'
 
-const signinURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signin page
-
+//const signinURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signin page
+const signinURL = 'http://localhost:4321/profile/:id'
 
 
 const SignIn = () => {
@@ -35,7 +35,7 @@ const SignIn = () => {
     try{ const response = await axios.post(signinURL, JSON.stringify({username:user, password}),
       {
         headers: {'Content-Type': 'application/json' },
-        withCredentials: false 
+        withCredentials: true
       }
     );
       console.log(JSON.stringify(response?.data))

@@ -94,10 +94,6 @@ a:link, a:visited {
   list-style-type: none;
 }
 
-.header-items{
-  display: flex;
-  flex-direction: row;
-}
 
 .search{
   display: flex;
@@ -143,6 +139,7 @@ a:link, a:visited {
   color: black;
   font-family: 'Noto Serif', Georgia, serif;
 }
+
 
 @media (max-width: 800px){
   .details-container{

@@ -22,14 +22,14 @@ const Planning = () => {
             <li className='plan'>User creates a profile and is able to update information</li>
           </ul>
           
-          <img className='photo' src={wireframe1} alt='first intial wireframe'/>
+          <img className='wireframe' src={wireframe1} alt='first intial wireframe'/>
 
           <ul>
             <li className='plan'>User can easily access dog breed information via database.</li>
             <li className='plan'>User will have ability to favorite pages for easy access</li>
           </ul>
 
-          <img className='photo' src={wireframe2} alt='second intial wireframe'/>
+          <img className='wireframe' src={wireframe2} alt='second intial wireframe'/>
         </div>
 
         <div className='content'>
