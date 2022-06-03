@@ -1,6 +1,6 @@
 import React from 'react'
 import pawprint from './blue-pawprint.png'
-import './planning.css'
+import './Planning.css'
 import wireframe1 from './wireframe1.png'
 import wireframe2 from './wireframe2.png'
 import trello from './trello.png'
