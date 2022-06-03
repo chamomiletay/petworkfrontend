@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.b1eb1810.css",
-    "main.js": "/static/js/main.4d2030e3.js",
-    "static/js/787.3fc98e35.chunk.js": "/static/js/787.3fc98e35.chunk.js",
-    "static/media/Video.mp4": "/static/media/Video.dfd9ca91698ab6ad3c55.mp4",
-    "static/media/harold.jpeg": "/static/media/harold.7cfafebfc6e5a5bc11f9.jpeg",
-    "static/media/mochi-creamcheese.jpg": "/static/media/mochi-creamcheese.5f2e11c955ecd18d7deb.jpg",
-    "static/media/bentley-crop.jpeg": "/static/media/bentley-crop.8d74b2181fffb2c772ce.jpeg",
-    "static/media/PetworkLogo.svg": "/static/media/PetworkLogo.16f2e5d9ab7a6e27a3eb662625a81c2c.svg",
-    "static/media/blue-pawprint.png": "/static/media/blue-pawprint.198c2998ee72172122b8.png",
-    "index.html": "/index.html",
-    "main.b1eb1810.css.map": "/static/css/main.b1eb1810.css.map",
-    "main.4d2030e3.js.map": "/static/js/main.4d2030e3.js.map",
-    "787.3fc98e35.chunk.js.map": "/static/js/787.3fc98e35.chunk.js.map"
+    "main.css": "/petworkfrontend/static/css/main.b1eb1810.css",
+    "main.js": "/petworkfrontend/static/js/main.3b122280.js",
+    "static/js/787.3fc98e35.chunk.js": "/petworkfrontend/static/js/787.3fc98e35.chunk.js",
+    "static/media/Video.mp4": "/petworkfrontend/static/media/Video.dfd9ca91698ab6ad3c55.mp4",
+    "static/media/harold.jpeg": "/petworkfrontend/static/media/harold.7cfafebfc6e5a5bc11f9.jpeg",
+    "static/media/mochi-creamcheese.jpg": "/petworkfrontend/static/media/mochi-creamcheese.5f2e11c955ecd18d7deb.jpg",
+    "static/media/bentley-crop.jpeg": "/petworkfrontend/static/media/bentley-crop.8d74b2181fffb2c772ce.jpeg",
+    "static/media/PetworkLogo.svg": "/petworkfrontend/static/media/PetworkLogo.16f2e5d9ab7a6e27a3eb662625a81c2c.svg",
+    "static/media/blue-pawprint.png": "/petworkfrontend/static/media/blue-pawprint.198c2998ee72172122b8.png",
+    "index.html": "/petworkfrontend/index.html",
+    "main.b1eb1810.css.map": "/petworkfrontend/static/css/main.b1eb1810.css.map",
+    "main.3b122280.js.map": "/petworkfrontend/static/js/main.3b122280.js.map",
+    "787.3fc98e35.chunk.js.map": "/petworkfrontend/static/js/787.3fc98e35.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b1eb1810.css",
-    "static/js/main.4d2030e3.js"
+    "static/js/main.3b122280.js"
   ]
 }
