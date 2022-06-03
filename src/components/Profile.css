@@ -42,3 +42,12 @@
 .descriptor {
     display: inline;
 }
+
+.logoutButton {
+    border: 2px solid burlywood;
+    background-color: bisque;
+    border-radius: 10px;
+    color: #78A7C4;
+    font-weight: bold;
+    padding: 1rem;
+}

@@ -1,3 +1,5 @@
+import Profile from "./Profile"
+
 export const HeaderItems=[
     {
         title:"Home",
@@ -27,6 +29,6 @@ export const HeaderItems=[
         title:"Profile",
         url:"",
         cName: 'profile',
-        path: "profile/:id"
+        path: <Profile />
     }
 ]

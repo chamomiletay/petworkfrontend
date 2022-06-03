@@ -13,7 +13,7 @@ function DogFacts() {
 
 
   const toggleLike = () =>{
-    const url = `https://petwork-backend.herokuapp.com/dogfacts/${id}`
+    const url = `http://localhost:4321/dogfacts/${id}`
     fetch(url, {
       method: 'POST',
     })
@@ -27,7 +27,7 @@ function DogFacts() {
 
 
   useEffect(() => {
-    fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
+    fetch(`http://localhost:4321/dogfacts/${id}`)
     .then(res => res.json())
     .then(res => {
       setDog(res.result)

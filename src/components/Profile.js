@@ -1,24 +1,26 @@
-import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import pawprint from './blue-pawprint.png'
 import bentleyPhoto from './bentley-crop.jpeg'
 import './Profile.css'
 
 const Profile = () => {
+  const navigate = useNavigate();
+  let {id} = useParams();
 
-    let {id} = useParams();
-
-    const [user, setUser] = useState();
-  
+  const [user, setUser] = useState("")
 
   useEffect(() => {
-    fetch(`https://petwork-backend.herokuapp.com/profile/${id}`)
+    fetch(`http://localhost:4321/profile/${id}`)
     .then(res => res.json())
     .then(res => {
-      setUser(res.result)
+      console.log(res)
+      setUser(res)
     })
-    .catch(console.error)
-  }, [])
+    .catch(error => console.log(error))
+  })
+
+  console.log(user)
 
   return (
     <div className='profile'>
@@ -33,7 +35,7 @@ const Profile = () => {
 
           <img className='profile-pic' src={bentleyPhoto} alt="User's profile"/>
 
-            <h2>{user.username}</h2>
+            {user ? <h2>{user.dogName}</h2> : <h2>Dog Name</h2>}
 
           <div className='descript-container'>
 
@@ -60,12 +62,14 @@ const Profile = () => {
         </div>
         
       {/* End Descriptive Info */}
-        
-      <div>
-          
-        </div>
 
       </div>
+      <button className="title logoutButton" onClick={() => {
+        localStorage.removeItem("userInfo");
+        navigate('/signin')
+          }}>
+          Log Out
+      </button>
     </div>
   )
 }

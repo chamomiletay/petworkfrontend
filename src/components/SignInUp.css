@@ -1,6 +1,20 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 20%;
+    align-items: center;
+    align-content: center;
+}
+
 .input{
     margin: 5px;
-    
+    border: 2px solid burlywood;
+    background-color: bisque;
+    border-radius: 10px;
+    color: #78A7C4;
+    font-weight: bold;
+    padding: 1rem;
+
 }
 
 
@@ -10,7 +24,7 @@
     font-weight: 600;
 }
 
-.signin{
+.signin, .signinButton {
     font-size: 15px;
 }
 
@@ -30,9 +44,11 @@ h2{
     margin: 0 10px
 }
 
-.doginfo{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+.signinButton{
+    border: 2px solid burlywood;
+    background-color: bisque;
+    border-radius: 10px;
+    color: #78A7C4;
+    font-weight: bold;
+    padding: .75rem;
 }
-
