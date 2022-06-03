@@ -18,7 +18,7 @@ const Profile = () => {
       setUser(res)
     })
     .catch(error => console.log(error))
-  })
+  }, [])
 
   console.log(user)
 
