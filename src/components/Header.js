@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import {HeaderItems} from './HeaderItems'
 import './Header.css'
 import logo from './PetworkLogo.svg'
 import { Link as LinkRouter } from 'react-router-dom'
 import {Link as LinkScroll } from 'react-scroll'
 import {animateScroll} from 'react-scroll'
+import Profile from './Profile'
 
 const scrollHome = ()=>{
   animateScroll.scrollToTop()
@@ -12,6 +14,10 @@ const scrollHome = ()=>{
 
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+ 
 
   return (
     <div className='header'>
@@ -32,6 +38,7 @@ const Header = () => {
               )
               })}
 
+            <LinkRouter to={ userInfo ? `/profile/${userInfo.username}` : '/signin'} className="pages profile">{userInfo? <li>Profile</li> : <li>Sign In</li>}</LinkRouter>
 
           </ul>
 

@@ -9,6 +9,15 @@ const Profile = () => {
   let {id} = useParams();
 
   const [user, setUser] = useState("")
+ 
+  useEffect(()=>{
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+ 
+    if (userInfo){
+      console.log(userInfo)
+      navigate(`/profile/${userInfo.username}`)
+    } 
+  }, [])
 
   useEffect(() => {
     fetch(`http://localhost:4321/profile/${id}`)

@@ -18,12 +18,14 @@ const SignIn = ({history}) => {
   const [success, setSuccess] = useState(false);
 
   useEffect(()=>{
-    const userInfo = localStorage.getItem("userInfo")
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"))
  
     if (userInfo){
-      navigate(`/profile/${username}`)
+      console.log(userInfo)
+      navigate(`/profile/${userInfo.username}`)
     } 
   }, [history])
+
 
   async function handleSubmit(e){
     e.preventDefault();
