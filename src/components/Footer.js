@@ -18,7 +18,7 @@ const Footer = () => {
               <div className='nav'>
                 <LinkRouter to={item.path}>
                   <li key={index}>{item.title} 
-                    <span> | </span>
+                    <span className='bar'> | </span>
                   </li>
                 </LinkRouter>
               </div>
