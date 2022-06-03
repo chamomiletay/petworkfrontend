@@ -12,6 +12,8 @@ import DogList from './components/DogList';
 import SignUp from './components/SignUp'
 import About from './components/About';
 import Planning from './components/Planning';
+import Navbar from './components/MobileHeader';
+import Sidebar from './components/Sidebar';
 
 function App() {
 
@@ -21,7 +23,8 @@ function App() {
     {/* Header displays below */}
 
     <Header />
-
+    <Navbar/>
+    <Sidebar/>
     {/* render routes below  */}
       <div className='body'>
       <Routes>
