@@ -18,4 +18,19 @@
     float: left;
 }
 
+.header{
+    margin-top: -20px;
+}
 
+
+@media (max-width: 420px){
+    .bar{
+        display: none;
+    }
+}
+
+@media(max-width: 830px) and (min-width: 500px){
+    .pages{
+        font-size: 200%;
+    }
+}

@@ -26,7 +26,7 @@ const Header = () => {
               return(
                 <div className='pages'>
                   <LinkRouter to={item.path}>
-                  <li key={index}> {item.title} <span> | </span> </li>
+                  <li key={index}> {item.title} <span className="bar"> | </span> </li>
                   </LinkRouter>
                 </div>
               )

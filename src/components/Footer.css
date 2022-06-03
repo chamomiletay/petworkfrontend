@@ -34,3 +34,9 @@ li:hover {
     width: 100px;
     float: left;
 }
+
+@media (max-width: 420px){
+    .bar{
+        display: none;
+    }
+}
