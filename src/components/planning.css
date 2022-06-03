@@ -18,14 +18,14 @@
 }
 
 .content:first-child {
-   margin: 0 10px;
+   margin: 0 20px;
 }
 
 .content:last-child {
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
-.wireframe {
+.photo {
     width: 450px;
     height: 300px;
     display: inline-block;
