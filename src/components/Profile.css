@@ -5,7 +5,7 @@
 
 .profile-info {
     flex: 1;
-    border: 2px solid burlywood;
+    border: 6px double burlywood;
     background-color: bisque;
     border-radius: 10px;
     position: relative;
