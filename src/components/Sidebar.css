@@ -5,19 +5,36 @@
 
 
 @media(max-width: 830px){
-.navbar{
+
+.nabar {
     height: 80px;
     background:none;
     display: flex;
     justify-content: left;
     align-items: left;
-    width: 250px;
-    height: 100vh;
-    z-index: 99;
+    width: 150px;
+    height: 50vh;
+    z-index: 90;
+    margin-left: -5%;
     top:0;
     position:fixed;
     transition: 850ms;
     opacity: 80%;
+}
+
+.navbar :hover{
+    height: 80px;
+    background:black;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 150px;
+    height: 50vh;
+    z-index: 0;
+    top:0;
+    position:fixed;
+    
+    opacity: 0%;
 }
 
 .bars{
@@ -40,9 +57,7 @@
     background: none;
 }
 
-
-
-.nav-menu{
+ .nav-menu {
     width: 250px;
     background: black;
     height: 100vh;
@@ -50,10 +65,13 @@
     top:0;
     position:fixed;
     transition: 850ms;
-    left: -100%;
-    opacity: 95%;
+    /* left: -100%; 
+     opacity: 95%; */
 
-}
+} 
+/* .nav-menu :hover{
+    display:none;
+} */
 
 
 .react-icons, .title{
@@ -73,10 +91,10 @@
 
 }
 
-.nav-menu.active{
+/* .nav-menu.active{
     left:0;
     transition:350ms;
-}
+} */
 
 
 .ex :hover{
