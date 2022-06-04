@@ -1,15 +1,24 @@
+import * as FaIcons from 'react-icons/fa'
+
+import * as GiIcons from 'react-icons/gi'
+
+
+
+
 
 export const HeaderItems=[
     {
         title:"Home",
         url:"",
         cName: 'nav-links',
+        icon: <GiIcons.GiDogHouse/>,
         path:' '
     },
     {
         title:"Dog Facts",
         url:"",
         cName: 'nav-links',
+        icon: <FaIcons.FaDog/>,
         path: "dogfacts"
     },
     // {

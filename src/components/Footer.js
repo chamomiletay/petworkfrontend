@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 import { Link as LinkRouter } from 'react-router-dom'
 import { FooterItems } from './FooterItems'
-import logo from './PetworkLogo.svg'
+
 
 const Footer = () => {
   return (

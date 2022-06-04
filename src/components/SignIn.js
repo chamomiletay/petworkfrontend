@@ -4,7 +4,7 @@ import axios from './SignUpAxios';
 import './SignInUp.css'
 import pawprint from './blue-pawprint.png'
 
-const SignIn = ({}) => {
+const SignIn = () => {
 
   const navigate = useNavigate();
 

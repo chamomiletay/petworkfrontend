@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {devices} from './MediaSizes'
-
-
+// import { Link as LinkScroll } from 'react-scroll'
+// import { FaTimes } from 'react-icons/fa'
 
 
 export const HomeContainer = styled.div`
@@ -49,19 +49,14 @@ export const HomeContent = styled.div`
 export const HomeH1 =styled.h1`
     justify-content: center;
     font-size: 300%;
-
     @media${devices.ipad}{
         margin-bottom: 100px;
         font-size: 300%;
     }
-
     @media${devices.mobile}{
         margin-bottom: 580px;
         font-size: 200%;
         margin-left: 95px;
     }
-
     
-
 `
-
