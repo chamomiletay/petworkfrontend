@@ -36,7 +36,8 @@ React, JavaScript, HTML5, CSS3
 - Displaying the correct individual dog clicked on from the dog facts page, instead of a different dog due to a discrepancy in the dog's API id vs. array index
 
 ### Link to Backend API
-*Coming Soon*
+-Backend Live API: https://petwork-backend.herokuapp.com/
+-Backend GitHub: https://github.com/senabon/petworkbackend/tree/main
 
 ### Authors / Contributors
 Briana Casey, Sena Diaz, & Taylor Lee
