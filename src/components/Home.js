@@ -6,12 +6,13 @@ import { HomeContainer, HomeBg, VideoBg, HomeContent, HomeH1} from './HomeElemen
 // import About from './About'
 
 
+
 const Home = () => {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"))
 
+  
   return (
     <div>
-     
       <HomeContainer>
         <HomeBg>
        
