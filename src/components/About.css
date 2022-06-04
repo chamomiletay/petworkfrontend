@@ -79,3 +79,10 @@ p {
     display: inline;
     margin: 20px 0;
 }
+
+
+@media(max-width:400px ){
+    .pet-container{
+        flex-direction: column;
+    }
+}
