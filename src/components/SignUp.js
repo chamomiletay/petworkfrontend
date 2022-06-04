@@ -53,7 +53,7 @@ const SignUp = () => {
 
   useEffect(()=>{
     setErrorMessage("")
-  }, [username, password])
+  }, [username, password, dogName, dogBreed, dogBirthday, favoriteToy, dogDescription])
 
 
   async function handleSubmit(e){

@@ -11,7 +11,7 @@ import { IconContext } from "react-icons";
 const Sidebar = ()=>{
     const [navbar, setNavbar] = useState(false)
 
-    //const showNavbar = () => setNavbar(!navbar);
+    const showNavbar = () => setNavbar(!navbar);
 
     return(
         <div className='nabar'>
@@ -19,7 +19,7 @@ const Sidebar = ()=>{
             
         <Link to='#'className="menu-bars">
             <IconContext.Provider value={{className:'react-icons bars'}}>
-                <FaIcons.FaBars />
+                <FaIcons.FaBars onClick={showNavbar}/>
             </IconContext.Provider>
     
             
