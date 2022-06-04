@@ -22,6 +22,11 @@ const SignUp = () => {
   const [validPassword, setValidPassword] = useState(false);
   const [passwordFocus, setPasswordFocus] = useState(false);
 
+  const [dogName, setDogName] = useState('');
+  const [dogBreed, setDogBreed] = useState('');
+  const [dogBirthday, setDogBirthday] = useState('')
+  const [favoriteToy, setFavoriteToy] = useState('')
+  const [dogDescription, setDogDescription] = useState('')
 
   const[ errorMessage, setErrorMessage] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -152,17 +157,54 @@ const SignUp = () => {
         Must begin with a letter <br></br>and must include <br></br>
         an uppercase letter and a number.
       </p>
+
+
     <div class="doginfo">
-    <input className="dogName input" placeholder="Dog's Name" type="text" name="dogName"/>
+
+    <input 
+      className="dogName input" 
+      placeholder="Dog's Name" 
+      type="text" 
+      name="dogName"
+      onChange = {(e) => setDogName(e.target.value)}
+      />
    
-    <input className="dogBreed input" placeholder="Dog's Breed" type="text" name="dogBreed" />
+    <input 
+      className="dogBreed input" 
+      placeholder="Dog's Breed" 
+      type="text" 
+      name="dogBreed" 
+      onChange = {(e) => setDogBreed(e.target.value)}
+      />
   
-    <input className="dogBirthday input" placeholder="Dog's Birthday" type="text" name="dogBirthday"/>
+    <input 
+      className="dogBirthday input" 
+      placeholder="Dog's Birthday" 
+      type="text" 
+      name="dogBirthday"
+      onChange = {(e) => setDogBirthday(e.target.value)}
+      />
    
-    <input className="dogToy input" placeholder="Favorite Toy" type="text" name="dogToy"/>
+    <input 
+      className="dogToy input" 
+      placeholder="Favorite Toy" 
+      type="text" 
+      name="dogToy"
+      onChange = {(e) => setFavoriteToy(e.target.value)}
+      />
    
-    <textarea className="dogDescription input"placeholder="Describe Your Dog!" type="text" name="dogDescription" rows="10" cols="30"/>
+    <textarea 
+      className="dogDescription input"
+      placeholder="Describe Your Dog!" 
+      type="text" 
+      name="dogDescription" 
+      rows="10" 
+      cols="30"
+      onChange = {(e) => setDogDescription(e.target.value)}
+      />
+
     <br></br>
+
     </div> 
     <p>*Psssst! Only a Password and Username are required at signup*</p>
 
