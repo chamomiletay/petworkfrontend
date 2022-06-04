@@ -66,7 +66,7 @@ const SignUp = () => {
       }
       setSuccess(true);
 
-      const {data} = await axios.post('http://localhost:4321/profile',
+      const {data} = await axios.post('https://petwork-backend.herokuapp.com/profile',
       {username, password},
       config
       );

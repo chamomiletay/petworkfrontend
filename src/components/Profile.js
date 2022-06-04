@@ -21,7 +21,7 @@ const Profile = () => {
   }, [])
 
   useEffect(() => {
-    fetch(`http://localhost:4321/profile/${id}`)
+    fetch(`https://petwork-backend.herokuapp.com/profile/${id}`)
     .then(res => res.json())
     .then(res => {
       console.log(res)
