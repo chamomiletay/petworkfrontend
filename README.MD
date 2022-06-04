@@ -5,7 +5,7 @@ ___________________
 This is the backend of a pet (dog) parent networking app, where users can create profiles to share information about their dogs, look up basic information about different dog breeds, and "love" (like) their favorite breeds to save for later!
 
 ### Link to Deployed Application
-Live version deployed to [Netlify](https://629ab49c6e0c1b12c11c14b2--cheery-salmiakki-f8289b.netlify.app/)
+Live version deployed to [Netlify](https://cheery-salmiakki-f8289b.netlify.app/)
 
 ### List of Technologies Used
 React, JavaScript, HTML5, CSS3
