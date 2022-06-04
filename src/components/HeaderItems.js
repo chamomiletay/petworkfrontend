@@ -1,5 +1,5 @@
 import * as FaIcons from 'react-icons/fa'
-
+import './Sidebar.css'
 import * as GiIcons from 'react-icons/gi'
 
 
