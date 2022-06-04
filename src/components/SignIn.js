@@ -44,12 +44,13 @@ const SignIn = () => {
       config
       );
       setUsername(data.username)
-      console.log(username)
+      console.log(data)
       localStorage.setItem('userInfo', JSON.stringify(data))
       setSuccess(false)
       window.location.reload(false)
     } catch(error) {
       setErrorMessage(error.response.data.message)
+      setSuccess(false)
     }
 }
 
