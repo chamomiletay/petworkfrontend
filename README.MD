@@ -22,7 +22,6 @@ React, JavaScript, HTML5, CSS3
 
 - After a successful log in, users are redirected to their profile and are now able to view "favorited" dogs 
 
-
 - Users can view and edit information about their profile. Users can also log out from the profile page 
 
 - Users are able to use the app across a variety of screen sizes and devices, including mobile and tablet
@@ -36,8 +35,10 @@ React, JavaScript, HTML5, CSS3
 - Displaying the correct individual dog clicked on from the dog facts page, instead of a different dog due to a discrepancy in the dog's API id vs. array index
 
 ### Link to Backend API
+
 -Backend Live API: https://petwork-backend.herokuapp.com/
 -Backend GitHub: https://github.com/senabon/petworkbackend/tree/main
+
 
 ### Authors / Contributors
 Briana Casey, Sena Diaz, & Taylor Lee
