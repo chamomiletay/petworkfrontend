@@ -17,6 +17,7 @@ const Profile = () => {
       console.log(userInfo)
       navigate(`/profile/${userInfo.username}`)
     } 
+    // eslint-disable-next-line
   }, [])
 
   useEffect(() => {
@@ -27,6 +28,7 @@ const Profile = () => {
       setUser(res)
     })
     .catch(error => console.log(error))
+    // eslint-disable-next-line
   }, [])
 
   console.log(user)

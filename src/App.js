@@ -1,6 +1,6 @@
 //---- imports ! ----//
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import SignIn from './components/SignIn';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -12,6 +12,7 @@ import DogList from './components/DogList';
 import SignUp from './components/SignUp'
 import About from './components/About';
 import Planning from './components/Planning';
+import Sidebar from './components/Sidebar';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     {/* Header displays below */}
 
     <Header />
-   
+    <Sidebar/>
     {/* render routes below  */}
       <div className='body'>
       <Routes>
