@@ -1,3 +1,4 @@
+
 export const HeaderItems=[
     {
         title:"Home",
@@ -11,22 +12,16 @@ export const HeaderItems=[
         cName: 'nav-links',
         path: "dogfacts"
     },
-    {
-        title:"Sign In",
-        url:"",
-        cName: 'nav-links',
-        path: "signin"
-    },
-    {
-        title:"Favorites",
-        url:"",
-        cName: 'nav-links',
-        path:"favorites"
-    },
-    {
-        title:"Profile",
-        url:"",
-        cName: 'profile',
-        path: "profile/:id"
-    }
+    // {
+    //     title:"Sign In",
+    //     url:"",
+    //     cName: 'nav-links',
+    //     path: "signin"
+    // },
+    // {
+    //     title:"Favorites",
+    //     url:"",
+    //     cName: 'nav-links',
+    //     path:"favorites"
+    // }
 ]

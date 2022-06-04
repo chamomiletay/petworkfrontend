@@ -3,8 +3,8 @@ import {HeaderItems} from './HeaderItems'
 import './Header.css'
 import logo from './PetworkLogo.svg'
 import { Link as LinkRouter } from 'react-router-dom'
-import {Link as LinkScroll } from 'react-scroll'
 import {animateScroll} from 'react-scroll'
+
 
 const scrollHome = ()=>{
   animateScroll.scrollToTop()
@@ -12,6 +12,9 @@ const scrollHome = ()=>{
 
 
 const Header = () => {
+
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+ 
 
   return (
     <div className='header'>
@@ -32,6 +35,10 @@ const Header = () => {
               )
               })}
 
+            <LinkRouter to={ userInfo ? `/profile/${userInfo.username}` : '/signin'} className="pages profile">{userInfo? <li>Profile</li> : <li>Sign In</li>}</LinkRouter>
+            <span className="pages bar">|</span>
+
+            <LinkRouter to={userInfo ? `/favorites` : ''} className="pages profile">{userInfo?<li>Favorites</li>:<li> </li>}</LinkRouter>
 
           </ul>
 

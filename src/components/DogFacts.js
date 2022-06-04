@@ -8,34 +8,41 @@ import FullHeart from './icons/FullHeart';
 function DogFacts() {
   let {id} = useParams();
 
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+
   const [dog, setDog] = useState();
   const [liked, setLiked] = useState(false);
 
 
   const toggleLike = () =>{
-    const url = `https://petwork-backend.herokuapp.com/dogfacts/${id}`
+    const url = `http://localhost:4321/dogfacts/${id}`
+    
+    if (userInfo){
     fetch(url, {
       method: 'POST',
     })
     .then(res => res.json())
     .then(res => {
-      console.log(res)
       setLiked(res.likeStatus)
     })
     .catch(error => console.log(error))
   }
+  }
 
 
   useEffect(() => {
-    fetch(`https://petwork-backend.herokuapp.com/dogfacts/${id}`)
+    fetch(`http://localhost:4321/dogfacts/${id}`)
     .then(res => res.json())
     .then(res => {
       setDog(res.result)
+      console.log(res)
       setLiked(res.likeStatus)     
   })
     .catch(console.error)
     // eslint-disable-next-line
   }, [])
+
+  console.log(userInfo, liked)
 
   if (!dog){
     return(
@@ -51,11 +58,11 @@ function DogFacts() {
       <img className="dog-image" src={dog[0].image.url} alt={dog.name} />
       
       <div className="details">
-
-      <div className='breed_header' onClick={toggleLike}>
-            {liked ? <FullHeart /> : <EmptyHeart />}
-      </div>
-
+        
+         <div className='breed_header' onClick={toggleLike}>
+          {liked ? <FullHeart /> : <EmptyHeart />}
+          </div>
+    
       <h2>{dog[0].name}</h2>
       <h3>{dog[0].origin}</h3> 
       <ul>

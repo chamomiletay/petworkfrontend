@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
 import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import { render } from '@testing-library/react';
 import axios from './SignUpAxios';
 import './SignInUp.css'
 import pawprint from './blue-pawprint.png'
@@ -10,17 +9,12 @@ import pawprint from './blue-pawprint.png'
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9]{5,15}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{7,20}$/;
 
-
-//const signUpURL = 'https://petwork-backend.herokuapp.com/profile/:id' //endpoint for signup?
-const signUpURL = 'http://localhost:4321/profile/:id'
-
-
 const SignUp = () => {
 
   const userRef = useRef();
   const errRef = useRef();
 
-  const [user, setUser] = useState("");
+  const [username, setUsername] = useState("");
   const [validName, setValidName] = useState(false);
   const [usernameFocus, setUsernameFocus] = useState(false);
 
@@ -29,12 +23,7 @@ const SignUp = () => {
   const [passwordFocus, setPasswordFocus] = useState(false);
 
 
-//use for password confirmation
-  // const [passwordMatch, setPasswordMatch] = useState("");
-  // const [validMatch, setValidMatch] = useState(false);
-  // const [matchFocus, setMatchFocus] = useState(false);
-
-  const[ errorMessage, setErrorMessage] = useState("");
+  const[ errorMessage, setErrorMessage] = useState(false);
   const [success, setSuccess] = useState(false);
 
   useEffect(()=>{
@@ -44,39 +33,39 @@ const SignUp = () => {
 
   //testing against username
   useEffect(()=>{
-    const result= USER_REGEX.test(user)
+    const result= USER_REGEX.test(username)
     console.log(result)
-    console.log(user)
+    console.log(username)
     setValidName(result)
-  }, [user])
+  }, [username])
 
   //teting against password
   useEffect(()=>{
     const result = PWD_REGEX.test(password);
     console.log(result)
     setValidPassword(result);
-    // const match = password ===passwordMatch;
-    // setValidMatch(match);
-  }, [password])// passwordMatch])
+  }, [password])
 
   useEffect(()=>{
     setErrorMessage("")
-  }, [user, password]) //passwordMatch])
+  }, [username, password])
 
 
   async function handleSubmit(e){
     e.preventDefault();
     
     try{
-      const response = await axios.post(signUpURL, JSON.stringify({username: user, password}),
+      const config = 
       {
-        headers:{ 'Content-Type' : 'application/json'},
-        withCredentials: true
+        headers:{ 'Content-type' : 'application/json'},
       }
+      setSuccess(true);
+
+      const {data} = await axios.post('http://localhost:4321/profile',
+      {username, password},
+      config
       );
-      console.log(response.data)
-      console.log(JSON.stringify)
-      setSuccess(true)
+      localStorage.setItem("userInfo", JSON.stringify(data))
 
     }catch(error){
       if(error.response.status ===409){
@@ -94,7 +83,7 @@ const SignUp = () => {
       <section>
         <h1> You are now signed up!</h1>
         <p>
-          <Link to="/profile/:id">Go to your Profile</Link>
+          <Link to="/profile">Go to your Profile</Link>
         </p>
       </section>
     ):(
@@ -115,7 +104,7 @@ const SignUp = () => {
       required
       ref={userRef}
       autoComplete="off"
-      onChange = {(e) => setUser(e.target.value)}
+      onChange = {(e) => setUsername(e.target.value)}
       onFocus={()=>setUsernameFocus(true)}
       onBlur={()=>setUsernameFocus(false)}
       aria-invalid = {validName ? "false" : "true"}
@@ -124,11 +113,11 @@ const SignUp = () => {
      <span className={validName ? 'valid' : 'display:none'}>
         <FontAwesomeIcon icon={faCheck}/>
       </span>
-      <span className={validName || !user ? 'display:none' : "invalid"}>
+      <span className={validName || !username ? 'display:none' : "invalid"}>
         <FontAwesomeIcon icon={faTimes}/>
       </span>
 
-      <p id= "usernamenote" className={usernameFocus && user && !validName ? "instuctions" : "offscreen"}>
+      <p id= "usernamenote" className={usernameFocus && username && !validName ? "instuctions" : "offscreen"}>
         <FontAwesomeIcon icon={faInfoCircle}/>
         6 to 16 characters.<br></br>
         Must begin with a letter <br></br>and can include letters and numbers.
@@ -153,7 +142,7 @@ const SignUp = () => {
      <span className={validPassword ? 'valid' : 'hide'}>
       <FontAwesomeIcon icon={faCheck}/>
       </span>
-      <span className={validPassword || !user ? "hide" : "invalid"}>
+      <span className={validPassword || !username ? "hide" : "invalid"}>
         <FontAwesomeIcon icon={faTimes}/>
       </span>
 
@@ -181,7 +170,7 @@ const SignUp = () => {
 
 
 
-    <button disabled={!validName ||!validPassword? true : false} >Submit</button>
+    <button className="signinButton" disabled={!validName ||!validPassword? true : false} >Submit</button>
 
     </form>
     

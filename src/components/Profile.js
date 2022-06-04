@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import pawprint from './blue-pawprint.png'
 import bentleyPhoto from './bentley-crop.jpeg'
 import './Profile.css'
 
 const Profile = () => {
+  const navigate = useNavigate();
+  let {id} = useParams();
+
+  const [user, setUser] = useState("")
+ 
+  useEffect(()=>{
+    const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+ 
+    if (userInfo){
+      console.log(userInfo)
+      navigate(`/profile/${userInfo.username}`)
+    } 
+  }, [])
+
+  useEffect(() => {
+    fetch(`http://localhost:4321/profile/${id}`)
+    .then(res => res.json())
+    .then(res => {
+      console.log(res)
+      setUser(res)
+    })
+    .catch(error => console.log(error))
+  }, [])
+
+  console.log(user)
+
   return (
     <div className='profile'>
       <img className='pawprint' src={pawprint} alt='pawprint'/>
@@ -17,7 +44,7 @@ const Profile = () => {
 
           <img className='profile-pic' src={bentleyPhoto} alt="User's profile"/>
 
-            <h2>[ Username from input goes here ]</h2>
+            {user ? <h2>{user.dogName}</h2> : <h2>Dog Name</h2>}
 
           <div className='descript-container'>
 
@@ -44,12 +71,15 @@ const Profile = () => {
         </div>
         
       {/* End Descriptive Info */}
-        
-      <div>
-          
-        </div>
 
       </div>
+      <button className="title logoutButton" onClick={() => {
+        localStorage.removeItem("userInfo");
+        navigate('/signin')
+        window.location.reload(false)
+          }}>
+          Log Out
+      </button>
     </div>
   )
 }

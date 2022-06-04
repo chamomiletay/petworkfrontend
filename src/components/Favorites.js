@@ -9,7 +9,7 @@ function Favorites() {
 
 
   useEffect(() => {
-    fetch(`https://petwork-backend.herokuapp.com/dogfacts/`)
+    fetch(`http://localhost:4321/dogfacts/`)
     .then(res => res.json())
     .then(res => {
       setDogs(res.results)
@@ -20,7 +20,7 @@ function Favorites() {
 
 const getFavorites = () => {
 
-  const url= `https://petwork-backend.herokuapp.com/favorites/`
+  const url= `http://localhost:4321/favorites/`
 
   fetch(url)
   .then(res => res.json())
