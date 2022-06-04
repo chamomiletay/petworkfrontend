@@ -51,3 +51,12 @@
     border: 2px solid rosybrown;
     border-radius: 10px;
 }
+
+@media(max-width:400px){
+    .container{
+        flex-direction: column;
+    }
+    .wireframe{
+        width:80vw;
+    }
+}

@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react'
 import { Link } from 'react-router-dom'
-import { faCheck, faTimes, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import {faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from './SignUpAxios';
 import './SignInUp.css'
@@ -115,12 +115,12 @@ const SignUp = () => {
       aria-invalid = {validName ? "false" : "true"}
       aria-describedby="usernamenote"
       />
-     <span className={validName ? 'valid' : 'display:none'}>
+     {/* <span className={validName ? 'valid' : 'display:none'}>
         <FontAwesomeIcon icon={faCheck}/>
       </span>
       <span className={validName || !username ? 'display:none' : "invalid"}>
         <FontAwesomeIcon icon={faTimes}/>
-      </span>
+      </span> */}
 
       <p id= "usernamenote" className={usernameFocus && username && !validName ? "instuctions" : "offscreen"}>
         <FontAwesomeIcon icon={faInfoCircle}/>
@@ -144,12 +144,12 @@ const SignUp = () => {
       aria-describedby="passwordnote"
       />
 
-     <span className={validPassword ? 'valid' : 'hide'}>
+     {/* <span className={validPassword ? 'valid' : 'hide'}>
       <FontAwesomeIcon icon={faCheck}/>
       </span>
       <span className={validPassword || !username ? "hide" : "invalid"}>
         <FontAwesomeIcon icon={faTimes}/>
-      </span>
+      </span> */}
 
       <p id = "passwordnote" className={passwordFocus && !validPassword ? "instuctions" : "offscreen"}>
         <FontAwesomeIcon icon={faInfoCircle}/>

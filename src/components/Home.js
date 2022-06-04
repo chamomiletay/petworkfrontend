@@ -12,7 +12,7 @@ const Home = () => {
 
   
   return (
-    <div>
+    <div className='homepage'>
       <HomeContainer>
         <HomeBg>
        
