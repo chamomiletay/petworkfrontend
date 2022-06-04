@@ -21,7 +21,7 @@ const Profile = () => {
   }, [])
 
   useEffect(() => {
-    fetch(`http://localhost:4321/profile/${id}`)
+    fetch(`https://petwork-backend.herokuapp.com/profile/${id}`)
     .then(res => res.json())
     .then(res => {
       console.log(res)
@@ -31,7 +31,7 @@ const Profile = () => {
     // eslint-disable-next-line
   }, [])
 
-  console.log(user.username)
+  console.log(user.dogName)
 
   return (
     <div className='profile'>
@@ -44,30 +44,37 @@ const Profile = () => {
       {/* Begin Descriptive Info */}
         <div className='profile-info'>
 
+          {user ? <h2 className='user'>{user.username}</h2> : <h2 className='user'>Dog Name</h2>}
+
           <img className='profile-pic' src={bentleyPhoto} alt="User's profile"/>
 
-            {user ? <h2>{user.dogName}</h2> : <h2>Dog Name</h2>}
+          <div className='descript-container'>
+
+            <img className='pawprint' src={pawprint} alt='pawprint'/>
+            <h3 className='descriptor'>Pet Name: {user.dogName}</h3>
+
+          </div>
 
           <div className='descript-container'>
 
             <img className='pawprint' src={pawprint} alt='pawprint'/>
-            <h3 className='descriptor'>Breed: [ user input ]</h3>
+            <h3 className='descriptor'>Breed: {user.dogBreed}</h3>
 
           </div>
           
           <div className='descript-container'>
             <img className='pawprint' src={pawprint} alt='pawprint'/>
-            <h3 className='descriptor'>Birthday: [ user input ]</h3>
+            <h3 className='descriptor'>Birthday: {user.dogBirthday}</h3>
           </div>
           
           <div className='descript-container'>
             <img className='pawprint' src={pawprint} alt='pawprint'/>
-            <h3 className='descriptor'>Fav Toy: [ user input ]</h3>
+            <h3 className='descriptor'>Fav Toy: {user.favoriteToy}</h3>
           </div>
           
           <div className='descript-container'>
             <img className='pawprint' src={pawprint} alt='pawprint'/>
-            <h3 className='descriptor'>Description: [ user input ]</h3>
+            <h3 className='descriptor'>Description: {user.dogDescription}</h3>
           </div>
           
         </div>
