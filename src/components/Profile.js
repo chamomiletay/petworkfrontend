@@ -17,8 +17,7 @@ const Profile = () => {
       console.log(userInfo)
       navigate(`/profile/${userInfo.username}`)
     } 
-    // eslint-disable-next-line
-  }, [])
+  }, [navigate])
 
   useEffect(() => {
     fetch(`https://petwork-backend.herokuapp.com/profile/${id}`)

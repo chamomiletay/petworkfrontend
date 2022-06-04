@@ -35,10 +35,11 @@ const Header = () => {
               )
               })}
 
-            <LinkRouter to={ userInfo ? `/profile/${userInfo.username}` : '/signin'} className="pages profile">{userInfo? <li>Profile</li> : <li>Sign In</li>}</LinkRouter>
-            <span className="pages bar">|</span>
+            {/* <LinkRouter to={ userInfo ? `/profile/${userInfo.username}` : '/signin'} className="pages profile">{userInfo? <li>Profile</li> : <li>Sign In</li>}</LinkRouter>
+            <span className="pages bar">|</span> */}
+            <LinkRouter to={`/profile/${userInfo.username}`} className="pages profile">Profile</LinkRouter>
 
-            <LinkRouter to={userInfo ? `/favorites` : ''} className="pages profile">{userInfo?<li>Favorites</li>:<li> </li>}</LinkRouter>
+            <LinkRouter to="/favorites" className="pages profile"><li>Favorites</li></LinkRouter>
 
           </ul>
 
