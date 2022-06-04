@@ -46,7 +46,7 @@ const Profile = () => {
 
           <img className='profile-pic' src={bentleyPhoto} alt="User's profile"/>
 
-            {user ? <h2>{user.username}</h2> : <h2>Dog Name</h2>}
+            {user ? <h2>{user.dogName}</h2> : <h2>Dog Name</h2>}
 
           <div className='descript-container'>
 
