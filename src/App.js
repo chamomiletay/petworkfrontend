@@ -14,6 +14,7 @@ import About from './components/About';
 import Planning from './components/Planning';
 import Sidebar from './components/Sidebar';
 
+
 function App() {
 
   return (
@@ -22,7 +23,9 @@ function App() {
     {/* Header displays below */}
 
     <Header />
+    <div >
     <Sidebar/>
+    </div>
     {/* render routes below  */}
       <div className='body'>
       <Routes>

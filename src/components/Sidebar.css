@@ -1,3 +1,96 @@
+
+@media(min-width:830px){
+    .nabar{display:none;}
+}
+
+
+@media(max-width: 830px){
 .navbar{
-    color:black;
+    height: 80px;
+    background:none;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 250px;
+    height: 100vh;
+    z-index: 99;
+    top:0;
+    position:fixed;
+    transition: 850ms;
+    opacity: 80%;
+}
+
+.bars{
+    height: 80px;
+    background: none;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 50px;
+    z-index: 80;
+    top:0;
+    position:fixed;
+    transition: 850ms;
+    opacity: 80%;
+}
+
+.menu-bars{
+    margin-left: 0.5rem;
+    font-size: 2.5rem;
+    background: none;
+}
+
+
+
+.nav-menu{
+    width: 250px;
+    background: black;
+    height: 100vh;
+    z-index: 99;
+    top:0;
+    position:fixed;
+    transition: 850ms;
+    left: -100%;
+    opacity: 95%;
+
+}
+
+
+.react-icons, .title{
+    color: white;
+    margin: 0% 5%;
+}
+
+.nav-links{
+    padding: 8px 0px 8px 16px;
+    height: 5vh;
+    font-size: 200%;
+    margin-right: 30%
+}
+
+.nav-links :hover{
+    color: #78A7C4;
+
+}
+
+.nav-menu.active{
+    left:0;
+    transition:350ms;
+}
+
+
+.ex :hover{
+    color: #78A7C4;
+  
+}
+
+.bars :hover{
+    color: #78A7C4;
+
+}
+
+/* .nav-menu-items.active{
+    display:none;
+} */
+
 }
