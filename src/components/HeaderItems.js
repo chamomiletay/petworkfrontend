@@ -3,9 +3,6 @@ import './Sidebar.css'
 import * as GiIcons from 'react-icons/gi'
 
 
-
-
-
 export const HeaderItems=[
     {
         title:"Home",
