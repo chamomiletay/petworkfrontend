@@ -17,7 +17,7 @@ function DogFacts() {
   const toggleLike = () =>{
     const url = `https://petwork-backend.herokuapp.com/dogfacts/${id}`
     
-    if (userInfo){
+    // if (userInfo){
     fetch(url, {
       method: 'POST',
     })
@@ -26,7 +26,7 @@ function DogFacts() {
       setLiked(res.likeStatus)
     })
     .catch(error => console.log(error))
-  }
+  // }
   }
 
 
