@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Petwork-Backend
+___________________
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description
+This is the backend of a pet (dog) parent networking app, where users can create profiles to share information about their dogs, look up basic information about different dog breeds, and "love" (like) their favorite breeds to save for later!
 
-## Available Scripts
+### Link to Deployed Application
+Live version deployed to Netlify at: (*Coming Soon*)
 
-In the project directory, you can run:
+### List of Technologies Used
+React, JavaScript, HTML5, CSS3
 
-### `npm start`
+### Application Functionality 
+- From the home page, users are able to view dog facts list and go to the sign in page
+- If users don't have an account already, they can sign up and insert information about their dog
+- After a successful log in, users are redirected to their profile and are now able to view "favorited" dogs 
+- Users are able to search the dog facts page for a specific breed 
+- Users can view and edit information about their profile. Users can also log out from the profile page 
+- Users are able to use the app across a variety of screen sizes and devices, including mobile and tablet
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Major Hurdles
+- Getting the backend and frontend to deploy and connect correctly 
+- Fetching the signed-in user's information from the backend to display on the profile
+- Connecting favorites to be user-specific favorites and save after log out / reappear on next log in 
+- Successfully allowing users to create accounts and log in
+- Changing header options depending on whether a user is signed in or not 
+- Displaying the correct individual dog clicked on from the dog facts page, instead of a different dog due to a discrepancy in the dog's API id vs. array index
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Link to Backend API
+*Coming Soon*
 
-### `npm test`
+### Authors / Contributors
+Briana Casey, Sena Diaz, & Taylor Lee
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Source Citations
+- https://www.youtube.com/watch?v=HANSMtDy508
+- https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
+- https://www.youtube.com/watch?v=iw5RSIflYGU
