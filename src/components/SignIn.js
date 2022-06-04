@@ -46,6 +46,7 @@ const SignIn = () => {
       setUsername(data.username)
       console.log(username)
       localStorage.setItem('userInfo', JSON.stringify(data))
+      window.location.reload(false)
     } catch(error) {
       setErrorMessage(error.response.data)
     }
