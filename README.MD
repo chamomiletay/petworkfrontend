@@ -22,7 +22,6 @@ React, JavaScript, HTML5, CSS3
 
 - After a successful log in, users are redirected to their profile and are now able to view "favorited" dogs 
 
-
 - Users can view and edit information about their profile. Users can also log out from the profile page 
 
 - Users are able to use the app across a variety of screen sizes and devices, including mobile and tablet
