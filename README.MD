@@ -12,10 +12,19 @@ React, JavaScript, HTML5, CSS3
 
 ### Application Functionality 
 - From the home page, users are able to view dog facts list and go to the sign in page
-- If users don't have an account already, they can sign up and insert information about their dog
-- After a successful log in, users are redirected to their profile and are now able to view "favorited" dogs 
+![Home page views](./Gifs/HomePageViews.gif)
+
 - Users are able to search the dog facts page for a specific breed 
+![Dog Facts Page](./Gifs/DogFactsPage.gif)
+
+- If users don't have an account already, they can sign up and insert information about their dog
+![Sign Up Page](./Gifs/SignUpPage.gif)
+
+- After a successful log in, users are redirected to their profile and are now able to view "favorited" dogs 
+
+
 - Users can view and edit information about their profile. Users can also log out from the profile page 
+
 - Users are able to use the app across a variety of screen sizes and devices, including mobile and tablet
 
 ### Major Hurdles
