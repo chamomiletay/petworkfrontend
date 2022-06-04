@@ -85,7 +85,7 @@ const Profile = () => {
       <button className="title logoutButton" onClick={() => {
         localStorage.removeItem("userInfo");
         navigate('/signin')
-        // window.location.reload(false)
+        window.location.reload(true)
           }}>
           Log Out
       </button>
