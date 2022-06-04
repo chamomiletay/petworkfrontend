@@ -5,7 +5,7 @@ ___________________
 This is the backend of a pet (dog) parent networking app, where users can create profiles to share information about their dogs, look up basic information about different dog breeds, and "love" (like) their favorite breeds to save for later!
 
 ### Link to Deployed Application
-Live version deployed to Netlify at: (*Coming Soon*)
+Live version deployed to [Netlify](https://629ab49c6e0c1b12c11c14b2--cheery-salmiakki-f8289b.netlify.app/)
 
 ### List of Technologies Used
 React, JavaScript, HTML5, CSS3
@@ -35,10 +35,8 @@ React, JavaScript, HTML5, CSS3
 - Displaying the correct individual dog clicked on from the dog facts page, instead of a different dog due to a discrepancy in the dog's API id vs. array index
 
 ### Link to Backend API
-
--Backend Live API: https://petwork-backend.herokuapp.com/
--Backend GitHub: https://github.com/senabon/petworkbackend/tree/main
-
+- [Backend Live API](https://petwork-backend.herokuapp.com/)
+- [Backend GitHub](https://github.com/senabon/petworkbackend/tree/main)
 
 ### Authors / Contributors
 Briana Casey, Sena Diaz, & Taylor Lee
