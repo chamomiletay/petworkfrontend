@@ -2,7 +2,7 @@
 ___________________
 
 ### Project Description
-This is the backend of a pet (dog) parent networking app, where users can create profiles to share information about their dogs, look up basic information about different dog breeds, and "love" (like) their favorite breeds to save for later!
+This is the frontend of a pet (dog) parent networking app, where users can create profiles to share information about their dogs, look up basic information about different dog breeds, and "love" (like) their favorite breeds to save for later!
 
 ### Link to Deployed Application
 Live version deployed to [Netlify](https://cheery-salmiakki-f8289b.netlify.app/)
